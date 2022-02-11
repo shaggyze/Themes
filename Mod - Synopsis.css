@@ -1,0 +1,53 @@
+.list-table .list-table-data:hover .data.tags:after {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    background-position: top left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    color: black;
+    text-shadow: none !important;
+    right: 0.5%;
+    width: 19%;
+    top: 0px;
+    font-family: arial !important;
+    font-size: 12px;
+    border: black 2px solid;
+    border-radius: 30px;
+    padding: 1%;
+    background-color: white;
+}
+
+.list-table .list-table-data .data.tags:after {
+    position: fixed;
+    right: -1% !important;
+    width: 18% !important;
+	min-height: 300px;
+    height: auto !important;
+    top: 0px !important;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    line-height: 14px !important;
+    font-size: 12px;
+    text-align: left;
+    background-color: rgba(255,255,255);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    text-shadow: none !important;
+    color: black;
+    background-size: contain;
+    z-index: 1000;
+}
+
+.list-unit .list-status-title .text, .list-unit .list-status-title:after {
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwMT5jBFHxK8ibEJQ-h8sBH8);
+    background-position: right bottom;
+    background-size: 92%;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 22% !important; 
+    height: 100% !important;
+    right: 0%;
+    bottom: 0%;
+    content: "";
+}

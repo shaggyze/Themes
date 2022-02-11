@@ -1,0 +1,95 @@
+/* Horizontal Tags / Revision 0.2 */
+.list-table-data {
+  	padding-top: 4px;
+  	padding-bottom: 22px;
+}
+.data.tags {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex !important;
+	width: 0;
+	height: 100%;
+	padding: 0 !important;
+	align-items: flex-end;
+}
+.data.tags div {
+	max-width: 1000px;
+	margin: 2px 6px; /* top+bottom, right+left */
+	/* last one was 80px */
+	font-size: 0;
+	white-space: nowrap;
+}
+.data.tags span {
+	display: inline-block;
+	padding: 0;
+}
+.data.tags span a {
+	padding: 2px 8px !important; /* top, right, bottom, left */
+	margin: 0 0 1px 1px; /* top, right, bottom, left */
+	white-space: nowrap; 
+}
+/*=======*/
+
+/* Horizontal Demographic & Genres / Revision 0.1 */
+.list-table-data {
+    padding-top: 5px !important;
+    padding-bottom: 30px !important;
+}
+.data.genre {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 80px;
+    text-align: left;
+    color: var(--text-dim);
+    left: 200px;
+    top: 10px;
+    display: flex !important;
+    width: 100%;
+    height: 0%;
+    padding: 10px !important;
+    align-items: flex-end;
+    vertical-align: top !important;
+}
+.list-table .list-table-data .data.genre a{
+    color: var(--text-dim);
+    font-size: 0.9em;
+}
+.list-table .list-table-data .data.genre a:hover {
+    color:var(--text-dim-h);
+}
+.data.genre div {
+    max-width: 1000px;
+    margin: 6px 6px;
+    font-size: 0;
+    white-space: nowrap;
+}
+.data.genre span {
+    display: inline-block;
+    padding: 0;
+}
+.data.genre span a {
+    padding: 2px 8px !important; /* top, right, bottom, left */
+    margin: 0 0 1px 1px; /* top, right, bottom, left */
+    white-space: nowrap; 
+    font-size: 10.7px !important;
+}
+.list-table .list-table-data .data.demographic {
+	position: absolute !important;
+}
+.list-table .list-table-data a[href*="&demographic"] {
+    position: absolute !important;
+}
+body[data-work="manga"] .list-table .list-table-data .data.demographic {
+    margin-top: 58px;
+    margin-left: 80px;
+}
+body[data-work="manga"] .list-table .list-table-data a[href*="&demographic"] {
+    margin-top: -65px;
+    margin-left: 0px;
+}
+body[data-work="anime"] .list-table .list-table-data a[href*="&demographic"] {
+    margin-top: -27px;
+    margin-left: 290px; 
+}
+/*=======*/
