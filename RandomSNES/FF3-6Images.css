@@ -1,0 +1,95 @@
+/* Changing these images essentially changes the theme */
+@\import "https://shaggyze.website/RandomSNES/RandomFF3-6Banner/";
+@\import "https://shaggyze.website/RandomSNES/RandomFF3-6Bg/";
+@\import "https://shaggyze.website/RandomSNES/RandomFF3-6Character1/";
+@\import "https://shaggyze.website/RandomSNES/RandomFF3-6Character2/";
+body {
+	/* name */
+	--name: "Final Fantasy 3/6" !important;
+	
+	background: var(--background);
+	background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover !important; 
+}
+
+/* Colors */
+:root {
+--all-color: #ff6b6b;
+--all-accent: #ed2939;
+--current-color: #cef7d9;
+--current-accent: #5fc786;
+--completed-color: #d2eef7;
+--completed-accent: #2cb0e9;
+--onhold-color: #fffdb7;
+--onhold-accent: #f7e042;
+--dropped-color: #ffe4c4;
+--dropped-accent: #ff0000;
+--planned-color: #b9c1c3;
+--planned-accent: #c3c3c3;
+}
+
+/* Banner */
+.cover-block {
+	top: 0;
+	left: 0;
+	z-index: 25;
+	width: 100%;
+	min-width: 1060px;
+	height: 318px;
+	background: var(--banner) no-repeat center center / cover scroll !important;
+}
+
+/*-S-T-A-R-T--------------------*\
+| Change Banner Height           |
+\*------------------------------*/
+/*Change number here*/
+:root { --banner-height: 500px; }
+
+.cover-block { height: var(--banner-height); }
+.header { margin-top: calc(var(--banner-height) - 36px); }
+.list-stats { top: calc(var(--banner-height) + 98px); }
+/*------------------------E-N-D-*/
+
+/* Cursor */
+body {
+/* Rem cursor: default; */
+	cursor: url(https://dl.dropboxusercontent.com/s/6vplalye20st6cd/rem%20cursor.png), auto !important;
+}
+a:hover {
+/* Ram cursor: pointer; */
+	cursor: url(https://dl.dropboxusercontent.com/s/mjf7g04itzysyrb/ram%20cursor.png), auto !important;
+}
+a.img:hover {
+/* Ram cursor: pointer; */
+	cursor: url(https://dl.dropboxusercontent.com/s/mjf7g04itzysyrb/ram%20cursor.png), auto !important;
+}
+
+/* CHARACTER 1 */
+body:after {
+	background-color: transparent !important;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: fixed;
+	content: "";
+	height: 65%;
+	width: 54%;
+	left: -15.5%;
+	bottom: -5%;
+	z-index: -2 !important;
+}
+
+/* CHARACTER 2 */
+.list-unit .list-status-title .text, .list-unit .list-status-title:after {
+    background-position: right bottom;
+    background-repeat: no-repeat;
+	background-size: 100%;
+    position: fixed;
+	content: "";
+    height: 100% !important;
+	width: 23% !important;
+    right: -3%;
+    bottom: 0%;
+}
