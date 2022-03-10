@@ -5,7 +5,7 @@ USAGE: Requires PHP Web Host with SSL.
 or
 @\import "https://shaggyze.website/RandomSNES/";
 
-# MOD
+# Mod
 USAGE: Should work for most themes, recommended to rehost yourself incase changes need made.
 
 @\import "URL";
