@@ -13,7 +13,7 @@
 			"synopsis-v": {
 				"name": "Synopsis CSS",
 				"type": "text/image_url",
-				"replacements": [["RegExp/^", "@/\import "{{{insert}}}";"]],
+				"replacements": [["RegExp/^", "@import "{{{insert}}}";"]],
 				"default": "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css"
 			}
 		}
