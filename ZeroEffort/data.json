@@ -1,13 +1,20 @@
 {
   "mytheme": {
-    "name": "Clarity",
+	"author": "Valerio Lyndon",
     "css": "https://dl.dropboxusercontent.com/s/v6ixr1nhnf6vjkl/Theme.css",
+	"type": "modern",
+	"help": "https://myanimelist.net/forum/?topicid=1723114",
     "type": "modern",
 	"mods": {
 		"synopsis": {
 			"name": "Synopsis",
 			"description": "Adds synopsis on hover",
 			"css": {"bottom": "https://shaggyze.github.io/Themes/Mod%20-%20Synopsis.css"}
+		}
+		"synopsis2": {
+			"name": "Synopsis 2",
+			"description": "Adds synopsis on hover",
+			"css": {"top": "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css}
 		}
     }
   }
