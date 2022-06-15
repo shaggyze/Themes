@@ -6,6 +6,38 @@
 	"type": "modern",
 	"help": "https://myanimelist.net/forum/?topicid=1723114",
     "type": "modern",
+	"options": {
+		"text": {
+			"name": "Name/Banner Text",
+			"type": "textarea/content",
+			"replacements": [["--name:none;", "--name:{{{insert}}};"]],
+			"default": ""
+		},
+		"avatar": {
+			"name": "Avatar",
+			"type": "text/image_url",
+			"replacements": [["--avatar:none;", "--avatar:{{{insert}}};"]],
+			"default": ""
+		},
+		"banner": {
+			"name": "Banner",
+			"type": "text/image_url",
+			"replacements": [["--banner:url(https://i.imgur.com/VoPJz2S.jpg);", "}body{--banner:{{{insert}}};}:root{"]],
+			"default": "https://i.imgur.com/VoPJz2S.jpg"
+		},
+		"character": {
+			"name": "Character",
+			"type": "text/image_url",
+			"replacements": [["--character:url(https://i.imgur.com/6IPyngH.png);", "}body{--character:{{{insert}}};}:root{"]],
+			"default": "https://i.imgur.com/6IPyngH.png"
+		},
+		"background": {
+			"name": "Background",
+			"type": "text/image_url",
+			"replacements": [["--background:none;", "--background:{{{insert}}};"]],
+			"default": ""
+		}
+	},
 	"mods": {
 		"synopsis": {
 			"name": "Synopsis",
