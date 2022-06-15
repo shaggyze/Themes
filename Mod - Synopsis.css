@@ -1,3 +1,4 @@
+@\import "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css";
 .list-table .list-table-data:hover .data.tags:after {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
