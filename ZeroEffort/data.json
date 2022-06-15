@@ -10,7 +10,7 @@
 			"name": "Synopsis",
 			"description": "Adds synopsis on hover",
 			"css": {"bottom": "https://shaggyze.github.io/Themes/Mod%20-%20Synopsis.css"}
-		}
+		},
 		"synopsis2": {
 			"name": "Synopsis 2",
 			"description": "Adds synopsis on hover",
