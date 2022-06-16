@@ -47,7 +47,16 @@
 		"synopsis2": {
 			"name": "Synopsis 2",
 			"description": "Adds synopsis on hover",
-			"css": {"top": "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css"}
+			"css": {"import": "@\\import \"\";"},
+			"options": {
+				"import-url": {
+				"name": "URL to your CSS",
+				"type": "text",
+				"replacements": [["\"\"", "\"{{{insert}}}\""]]
+				"default": "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css"
+				}
+			}
+		}
 		}
     }
   }
