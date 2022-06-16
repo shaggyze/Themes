@@ -43,14 +43,10 @@
 			"name": "Synopsis",
 			"description": "Adds synopsis on hover",
 			"css": {"bottom": "https://shaggyze.github.io/Themes/Mod%20-%20Synopsis.css"}
+			"css": {"top": "@\\import \"https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css\";"}
 		},
 		"synopsis2": {
 			"name": "Synopsis 2",
-			"description": "Adds synopsis on hover",
-			"css": {"top": "@\\import \"https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css\";"}
-		},
-		"synopsis3": {
-			"name": "Synopsis 3",
 			"description": "Adds synopsis on hover",
 			"css": {"import": "@\\import \"\";"},
 			"options": {
