@@ -52,7 +52,7 @@
 				"import-url": {
 				"name": "URL to your CSS",
 				"type": "text",
-				"replacements": [["\"\"", "\"{{{insert}}}\""]]
+				"replacements": [["\"\"", "\"{{{insert}}}\""]],
 				"default": "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css"
 				}
 			}
