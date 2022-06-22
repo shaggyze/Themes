@@ -1,0 +1,1289 @@
+/*==============================*\
+| "Zowie" by ShaggyZE            |
+| R0.1                           |
+| == = == THEME CONTENTS == = == |
+
+! IMPORTS
+
+! OPTIMIZATIONS
+? repeated code & more
+@ Variables
+@ Transitions
+@ Nav-Buttons
+
+! PAGE-BASE
+? generic containers
+
+! HEADER
+@ Cover
+@ Nav-Main
+? main Bar
+@ Nav-Buttons-Top
+? located above main bar
+@ Nav-Buttons-L
+? below main bar on left
+@ Nav-Buttons-R
+? below main bar on right
+@ Sort-By
+? sort menu
+
+! LIST
+? anime/manga listings
+@ Base
+@ Status
+@ Number
+@ Image
+? image/number
+@ Title
+? title/type
+@ Score
+@ Progress
+@ Priority
+@ Generic-Columns
+? rated/magazine/storage/season
+@ Tags
+? tags/studio/licensors
+@ Dates
+? started/finished/airing/etc
+@ More-Info
+
+! FOOTER
+
+! OVERLAYS
+? overlayed menus and iframes
+@ Base
+@ iframes
+@ Filter-Menu
+
+\*==============================*/
+
+
+
+
+/*==============================*\
+  !IMPORTS
+\*==============================*/
+
+@\import "https://fonts.googleapis.com/css?family=Oswald";
+@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/resources/font-awesome-4.7.0/css/font-awesome-force-legacy.min.css";
+
+
+
+
+
+/*==============================*\
+  !OPTIMIZATIONS @Variables
+\*==============================*/
+
+:root {
+	/* Primary Customization */
+	--name: none;
+	--avatar: none;
+	--banner: url(https://i.imgur.com/VoPJz2S.jpg);
+	--character: url(https://i.imgur.com/6IPyngH.png);
+	--background: none;
+
+	/* Generic Colours */
+	--pbg: #efefef;
+	--bg: #fff;
+	--bg-dark: #ddd;
+	--text: #323232;
+	--text-h: #787878;
+	--text-dim: #bababa;
+	--text-dim-h: #646464;
+	--text-dark: #111;
+	--shadow: rgba(0,0,0,0.2);
+	--icon: #323232;
+	--accent: #4065ba;
+	--banner-text: #fff;
+	--banner-text-shadow: rgba(0,0,0,0.45);
+
+	/* Button Colours */
+	--btn-bg: #ebebeb;
+	--btn-bg-h: #323232;
+	--btn-head-bg-h: #1d439b;
+	--btn-text-h: #fff;
+
+	/* Header Colours */
+	--text-head: #9b9b9b;
+	--text-head-h: #787878;
+
+	/* Status Colours */
+	--watching: #2db039;
+	--completed: #26448f;
+	--onhold: #f1c83e;
+	--dropped: #a12f31;
+	--plantowatch: #c3c3c3;
+
+	/* Single-Use Colours */
+	--cover-bg: #323232;
+	--edit-btn: #d9d9d9;
+	--checkmark: #9696eb;
+
+	/* Other */
+	--font-1: Arial, Verdana, "FontAwesome 4", FontAwesome, sans-serif;
+	--font-2: Verdana, Arial, "FontAwesome 4", FontAwesome, sans-serif;
+	--font-icon: "FontAwesome 4", FontAwesome;
+}
+
+/* BACKGROUND */
+
+body {
+background-color: teal;
+}
+
+/* HEADER */
+
+.header {
+background-color: pink;
+}
+
+.header .header-menu {
+/* "Viewing someone's list" */
+background-color: gray;
+}
+
+.header .header-title {
+/* MyAnimeList Logo */
+background-color: green;
+}
+
+/* LIST MENU */
+
+.list-menu-float {
+border: 3px solid red;
+}
+
+.list-menu-float .icon-menu {
+/* All list menu buttons */
+background-color: green;
+}
+
+.list-menu-float .icon-menu.anime-list {
+/* Specific list menu button */
+background-color: blue;
+}
+
+/* LIST CONTAINER */
+
+#list-container {
+background-color: purple;
+}
+
+/* IMAGE BLOCK */
+
+.cover-block {
+background-color: red;
+}
+
+.cover-block #cover-image {
+/* Cover image */
+border: 6px solid green;
+}
+
+.cover-block .image-container .btn-list-setting {
+/* Settings button */
+background-color: yellow;
+}
+
+/* STATUS MENU */
+
+#status-menu {
+background-color: wheat;
+}
+
+#status-menu .status-button {
+/* All status buttons */
+background-color: white;
+}
+
+#status-menu .status-button.watching {
+/* Specific status button */
+background-color: brown;
+}
+
+/* SEARCH */
+
+.status-menu-container .search-container {
+background-color: orange;
+}
+
+/* LIST UNIT */
+
+.list-unit {
+border: 3px solid red;
+}
+
+/* STATUS TITLE */
+
+.list-unit .list-status-title {
+background-color: blue;
+}
+
+/* STATS */
+
+#show-stats-button {
+/* Duh */
+background-color: teal;
+}
+
+#advanced-options-button {
+/* Duh */
+background-color: lime;
+}
+
+.list-unit .list-stats {
+/* Stat bar */
+background-color: orange;
+}
+
+/* LIST TABLE */
+
+/* Sort row */
+
+.list-table .list-table-header {
+border: 3px solid yellow;
+}
+
+.list-table .list-table-header .header-title {
+/* All sort cells */
+background-color: green;
+}
+
+.list-table .list-table-header .header-title.title {
+/* Specific sort cell */
+background-color: orange;
+}
+
+/* Data rows */
+
+.list-table tbody.list-item {
+border: 3px solid pink;
+}
+
+.list-table .list-table-data .data {
+/* All data cells */
+background-color: cyan;
+}
+
+.list-table .list-table-data .data.score {
+/* Specific data cell */
+background-color: wheat;
+}
+
+.list-table .list-table-data .data.title .link {
+/* Anime titles */
+color: magenta;
+}
+
+.add-edit-more {
+background-color: red;
+}
+
+/* LOADING SPACE */
+
+.list-unit .loading-space {
+background-color: blue;
+}
+
+/* FOOTER */
+
+footer {
+background-color: orange;
+}
+
+
+/* MORE SEPARATION FOR INSPECT ELEMENT USERS */
+.list-table .list-table-header .header-title.image {
+    background-color: red;
+}
+
+.list-table .list-table-header .header-title.number {
+    background-color: aliceblue;
+}
+
+.list-table .list-table-header .header-title.score {
+    background-color: purple;
+}
+
+.list-table .list-table-header .header-title.type{
+  background-color: orange;
+}
+
+.list-table .list-table-header .header-title.progress{
+  background-color: silver;
+}
+
+.list-table .list-table-header .header-title.tags{
+background-color: gold;}
+
+.list-table .list-table-header .header-title.rated{
+background-color: blue;}
+
+.list-table .list-table-header .header-title.started{
+background-color: red;}
+
+
+
+.list-table .list-table-header .header-title.finished{
+background-color: yellow;}
+
+
+.list-table .list-table-header .header-title.days{
+background-color: grey;}
+
+
+.list-table .list-table-header .header-title.storage{
+background-color: white;}
+
+
+.list-table .list-table-header .header-title.priority{
+background-color: orange;}
+
+.list-table .list-table-data .data.number{
+background-color: white;}
+
+.list-table .list-table-data .data.title{
+background-color: orange;}
+
+.list-table .list-table-data .data.type{
+background-color: green;}
+
+.list-table .list-table-data .data.progress{
+background-color: violet;}
+
+.list-table .list-table-data .data.rated{
+background-color: yellow;}
+
+.list-table .list-table-data .data.storage{
+background-color: red;}
+
+.list-table .list-table-data .data.licensor{
+background-color: black;}
+
+.list-table .list-table-data .data.studio{
+background-color: silver;}
+
+.list-table .list-table-data .data.title.clearfix{
+  background-color: beige;
+}
+
+#status-menu .status-button.completed{
+  background-color: silver;
+}
+
+#status-menu .status-button.onhold{
+  background-color: gold;
+}
+
+#status-menu .status-button.dropped{
+  background-color: green;
+}
+
+#status-menu .status-button.plantowatch{
+  background-color: red;
+}
+
+#status-menu .status-button.all_anime{
+  background-color: aquamarine;
+}
+
+.list-menu-float .icon-menu.profile
+
+.list-menu-float .icon-menu.quick-add {
+    background:purple !important;}
+    
+    
+    .list-menu-float .icon-menu.anime-list  {
+    background: teal !important;}
+    
+    .list-menu-float .icon-menu.manga-list{
+    background: cyan !important;}
+    
+    
+.list-menu-float .icon-menu.history{
+    background: yellow !important;}
+
+.list-menu-float .icon-menu.export{
+    background: lime !important;}
+
+.list-menu-float .icon-menu.logout{
+    background: violet !important;}
+
+.list-menu-float .icon-menu.setting{
+    background: orange !important;}
+
+#copyright:after {
+/* Custom copyright text */
+content: "Color-coded starter layout by Shishio-kun & Doomcat55.";
+}
+
+
+/* HEADER NON-LINKS */
+.header *{
+	color: red !important;
+
+
+
+}
+
+.header .header-menu .btn-menu{
+	color: black !important;
+
+
+
+}
+.header .header-menu .header-info{
+	color: blue !important;
+
+
+
+}
+
+/* HEADER LINKS*/
+.header .header-menu *{
+	color: purple !important;
+
+
+
+	
+}
+
+#header-menu-button{
+	color: orange !important;
+
+
+
+	
+}
+
+.header .header-menu a{
+	color: green !important;
+
+
+
+	
+}
+
+.header .header-title{
+	background-color: green !important;
+
+
+
+	
+}
+
+ /* SIDE MENU */
+
+.list-menu-float{
+
+
+
+}
+
+/* SIDE MENU USER AVATAR */
+.list-menu-float .icon-menu.profile{
+
+
+
+}
+
+
+/* QUICK ADD PARTS*/
+.list-menu-float .icon-menu.quick-add .icon
+{
+	background-color: red !important;
+	color: green !important;
+
+
+
+}
+
+.list-menu-float .icon-menu.quick-add .text
+{
+	background-color: orange !important;
+	color: green !important;
+
+
+
+}
+
+.list-menu-float .icon-menu.quick-add
+{
+	background-color: green !important;
+
+
+
+}
+
+
+
+
+
+/* ANIME LIST LINK*/
+.list-menu-float .icon-menu.anime-list .icon
+{
+	background-color: orange !important;
+	color: green !important;
+
+
+
+}
+
+
+.list-menu-float .icon-menu.anime-list .text
+{
+	background-color: orange !important;
+	color: green !important;
+
+
+
+}
+
+
+.list-menu-float .icon-menu.anime-list
+{
+	background-color: green !important;
+
+
+
+}
+
+
+/* MANGA LIST LINK*/
+.list-menu-float .icon-menu.manga-list .icon
+{
+	background-color: silver !important;
+	color: green !important;
+
+
+
+}
+
+
+.list-menu-float .icon-menu.manga-list .text
+{
+	background-color: orange !important;
+	color: green !important;
+
+
+
+}
+
+
+.list-menu-float .icon-menu.manga-list 
+{
+	background-color: green !important;
+
+
+
+}
+
+
+
+/* HISTORY LINK*/
+.list-menu-float .icon-menu.history .icon
+{
+	background-color: blue !important;
+	color: green !important;
+
+
+
+}
+
+
+.list-menu-float .icon-menu.history .text
+{
+	background-color: orange !important;
+	color: green !important;
+
+
+
+}
+
+
+.list-menu-float .icon-menu.history
+{
+	background-color: green !important;
+
+
+
+}
+
+
+
+/* EXPORT LINK*/
+.list-menu-float .icon-menu.export .icon
+{
+	background-color: yellow !important;
+	color: green !important;
+
+
+
+}
+
+
+.list-menu-float .icon-menu.export .text
+{
+	background-color: orange !important;
+	color: green !important;
+
+
+
+}
+
+.list-menu-float .icon-menu.export
+{
+	background-color: green !important;
+
+
+
+}
+
+
+
+/* LOGOUT LINK*/
+.list-menu-float .icon-menu.logout .icon
+{
+	background-color: cyan !important;
+	color: green !important;
+
+
+
+}
+
+.list-menu-float .icon-menu.logout .text
+{
+	background-color: orange !important;
+	color: green !important;
+
+
+
+}
+
+
+.list-menu-float .icon-menu.logout
+{
+	background-color: green !important;
+
+
+
+}
+
+
+/* SETTINGS */
+.list-menu-float .icon-menu.setting .icon
+{
+	background-color: white !important;
+	color: green !important;
+
+
+
+}
+
+.list-menu-float .icon-menu.setting .text
+{
+	background-color: orange !important;
+	color: green !important;
+
+
+
+}
+
+
+.list-menu-float .icon-menu.setting
+{
+	background-color: green !important;
+
+
+
+}
+
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting{
+	background-color: purple !important;
+
+
+
+} 
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting
+{
+	background-color: orange !important;
+
+
+
+}/* CATEGORY BUTTONS */
+
+.status-menu-container{
+background-color: purple;	
+
+
+
+}
+
+
+a.status-button.all_anime,
+a.status-button.all_manga{
+	color: red !important;
+	background-color: lime;
+
+
+
+}
+a.status-button.watching{
+	color: orange !important;
+		background-color: white;
+
+
+
+}
+a.status-button.completed{
+	color: green !important;
+			background-color: orange;
+
+
+
+}
+a.status-button.onhold {
+	color: brown !Important;
+			background-color: red;
+
+
+
+}
+a.status-button.dropped{
+	color: blue !important;
+				background-color: silver;
+
+
+}
+a.status-button.plantowatch,
+a.status-button.plantoread{
+	color: purple !important;
+	background-color: yellow;
+
+
+
+}
+
+
+/* SEARCH BUTTON*/
+.status-menu-container .search-container #search-button{
+	color: grey !important;
+
+
+
+}
+
+.status-menu-container .search-container #search-box input {
+
+    background: black !important;
+    color: red !important;
+
+
+
+}
+/* CATEGORY HEADER FONT */
+.list-unit .list-status-title .text {
+	color: orangered !important;
+	background-color: black;
+
+
+
+}
+
+
+/* STATS AND FILTERS*/
+
+a#show-stats-button{
+	color: orange !important;
+
+
+
+}
+
+a#advanced-options-button{
+color: red !important;	
+
+
+
+}
+
+
+/* LIST STATS*/
+.list-unit .list-stats{
+	color: red !important;
+	background-color: grey;
+
+
+
+}
+
+
+/* LIST COLUMN HEADERS */
+
+/* NUMBER */   
+th.header-title.number{
+color: red  !important; 
+
+
+
+}
+/* IMAGE */
+th.header-title.image a{
+color: green  !important; 
+
+
+
+}
+
+/* TITLE */
+th.header-title.title a{
+color: blue  !important; 
+
+
+
+}
+
+/* SCORE */
+th.header-title.score a{
+color: orange  !important; 
+
+
+
+}
+
+/* TYPE */
+th.header-title.type a{
+color: purple  !important; 
+
+
+
+}
+
+/* PROGRESS/EPISODES, VOLUMES, CHAPTERS */
+th.header-title.progress a{
+color: violet !important; 
+
+
+
+}
+
+th.header-title.chapters a{
+color: blue  !important; 
+
+
+
+}
+th.header-title.volumes a{
+color: pink  !important; 
+
+
+
+}
+
+
+/* TAGS */
+th.header-title.tags{
+color: grey  !important; 
+
+
+
+}
+
+/* RATING */
+th.header-title.rated a{
+color: lime !important; 
+
+
+
+}
+
+
+/* DATES STARTED*/
+th.header-title.started a{
+color: red !important; 
+
+
+
+}
+
+/* DATES FINISHED */
+th.header-title.finished a{
+color: green !important; 
+
+
+
+}
+
+/* DAYS */
+th.header-title.days{
+color: orangered  !important; 
+
+
+
+}
+
+/* SEASON*/
+th.header-title.started{
+color: grey !important; 
+
+
+
+}
+
+/* STUDIO */
+th.header-title.studio{
+color: magenta  !important; 
+
+
+
+}
+
+/* LICENSOR */
+th.header-title.licensor{
+color: orange !important; 
+
+
+
+}
+
+/* STORAGE */
+th.header-title.storage a{
+color: turquoise !important; 
+
+
+
+}
+
+/* PRIORITY */
+th.header-title.priority a{
+color: cyan !important; 
+
+
+
+}
+
+/* MAGAZINE */
+th.header-title.magazine{
+color: purple !important; 
+
+
+
+}       
+
+/* RETAIL */
+th.header-title.retail{
+color: black !important; 
+
+
+
+}
+
+/* NUMBER */
+ .list-table .list-table-data .data.number{
+	color: red !important;
+background-color: orange !important;
+
+
+
+}
+
+
+/* ANIME TITLE */
+.list-table .list-table-data .data.title .link{
+	color: purple !important;
+background-color: orange !important;
+
+
+
+}
+
+/* AIRING, PUBLISHING, ETC*/
+.list-table .list-table-data .data.title .content-status{
+	color: black !important;
+background-color: orange !important;
+
+
+
+}
+
+
+/* EDIT/ADD, little dash between them, and MORE */
+
+.list-table a.List_LightBox{
+	color: blue !important;
+background-color: orange !important;
+
+
+
+}
+
+
+.list-table .list-table-data .data.title .add-edit-more{
+	color: cyan !important;
+background-color: orange !important;
+
+
+
+}
+
+
+.list-table .list-table-data .data.title .more a{
+	color: green !important;
+background-color: orange !important;
+
+
+
+}
+
+
+/* TV ICON*/
+
+
+.icon-watch{
+background-color: orange !important;
+
+
+
+}
+
+/* SCORE*/
+/* SCORE*/
+.list-table .list-table-data .data.score,
+.list-table .list-table-data .data.score *,
+.list-table .list-table-data .data.score .link *{
+	color: gold !important;
+background-color: orange !important;
+
+
+
+}
+/* TAGS */
+.list-table .list-table-data .data.tags a {
+	color: red !important;
+background-color: orange !important;
+
+
+
+}
+/* TAGS EDIT FONT */
+.list-table .list-table-data .tags .edit{
+	color: green !important;
+background-color: orange !important;
+
+
+
+}
+
+
+
+
+/* TYPE */
+.list-table .list-table-data .data.type{
+	color: green !important;
+background-color: orange !important;
+
+
+
+}
+
+
+/* PROGRESS */
+.list-table .list-table-data .data.progress a,
+.list-table .list-table-data .data.progress *{
+	color: blue !important;
+background-color: orange !important;
+
+
+
+}
+
+
+/* RATED*/
+.list-table .list-table-data .data.rated{
+	color: black !important;
+background-color: orange !important;
+
+
+
+}
+
+
+
+/*  USER STARTED AND ENDING DATES*/
+.list-table .list-table-data .data.started{
+	color: purple !important;
+background-color: orange !important;
+
+
+
+}
+.list-table .list-table-data .data.finished{
+	color: red !important;
+background-color: orange !important;
+
+
+
+}
+
+
+
+/* DAYS */
+.list-table .list-table-data .data.days{
+	color: green !important;
+background-color: orange !important;
+
+
+
+}
+
+
+/* SEASON */
+.list-table .list-table-data .data.season a{
+	color: grey !important;
+background-color: orange !important;
+
+
+
+}
+
+
+/* AIRING START AND END DATES */
+.list-table .list-table-data .data.airing-started{
+	color: blue !important;
+background-color: orange !important;
+
+
+
+}
+
+.list-table .list-table-data .data.airing-finished{
+	color: cyan !important;
+background-color: orange !important;
+
+
+
+}
+
+
+/* STUDIO */
+.list-table .list-table-data .data.studio a{
+	color: black !important;
+background-color: orange !important;
+
+
+
+}
+
+
+/* LICENSOR*/
+.list-table .list-table-data .data.licensor a{
+		color: limegreen !important;
+background-color: orange !important;
+
+
+
+	
+}
+
+
+/* STORAGE */
+.list-table .list-table-data .data.storage{
+		color: purple !important;
+background-color: orange !important;
+
+
+
+	
+}
+
+
+/* PRIORITY */
+.list-table .list-table-data .data.priority {
+		color: teal !important;
+background-color: orange !important;
+
+
+
+	
+}
+
+
+
+/* STATUS COLORS IN FRONT OF ROW */
+.list-table .list-table-data .data.status.reading, .list-table .list-table-data .data.status.watching{
+		background-color: blue !important;
+	
+
+
+}
+
+
+.list-table .list-table-data .data.status.completed
+{
+		background-color: red !important;
+	
+
+
+}
+
+
+.list-table .list-table-data .data.status.onhold
+{
+		background-color: white !important;
+	
+
+
+}
+
+
+.list-table .list-table-data .data.status.onhold
+{
+		background-color: orange !important;
+	
+
+
+}
+
+.list-table .list-table-data .data.status.dropped
+{
+		background-color: black !important;
+	
+
+
+}
+
+
+.list-table .list-table-data .data.status.plantowatch,
+.list-table .list-table-data .data.status.plantoread
+{
+		background-color: black !important;
+	
+
+
+}
+
+#footer-block {
+		color: purple !important;
+background-color: orange !important;
+
+
+
+}
+
+
+#copyright {
+		color: purple !important;
+background-color: red !important;
+
+
+
+}
+
+#recaptcha-terms{
+		color: grey !important;
+background-color: yellow !important;
+
+
+
+}
