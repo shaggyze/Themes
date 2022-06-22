@@ -1,6 +1,6 @@
 /*==============================*\
 | "Zowie" by ShaggyZE            |
-| R0.2                           |
+| R0.3                           |
 | == = == THEME CONTENTS == = == |
 
 ! IMPORTS
@@ -126,6 +126,22 @@
 	--font-icon: "FontAwesome 4", FontAwesome;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* BACKGROUND */
 
 body {
@@ -135,7 +151,8 @@ background-color: var(--bg) !important;
 /* HEADER */
 
 .header {
-background-color: pink !important;
+background: var(--bg) !important;
+color: var(--text) !important;
 }
 
 .header .header-menu {
@@ -146,6 +163,7 @@ background-color: gray !important;
 .header .header-title {
 /* MyAnimeList Logo */
 background-color: green !important;
+color: var(--text) !important;
 }
 
 /* LIST MENU */
@@ -422,81 +440,48 @@ content: "Color-coded starter layout by Shishio-kun & Doomcat55." !important;
 /* HEADER NON-LINKS */
 .header *{
 	color: red !important;
-
-
-
 }
 
 .header .header-menu .btn-menu{
 	color: black !important;
-
-
-
 }
 .header .header-menu .header-info{
 	color: blue !important;
-
-
-
 }
 
 /* HEADER LINKS*/
 .header .header-menu *{
 	color: purple !important;
-
-
-
-	
 }
 
 #header-menu-button{
 	color: orange !important;
-
-
-
-	
 }
 
 .header .header-menu a{
 	color: green !important;
-
-
-
-	
 }
 
 .header .header-title{
 	background-color: green !important;
-
-
-
-	
 }
 
  /* SIDE MENU */
 
 .list-menu-float{
 
-
-
 }
 
 /* SIDE MENU USER AVATAR */
 .list-menu-float .icon-menu.profile{
 
-
-
 }
 
 
 /* QUICK ADD PARTS*/
-.list-menu-float .icon-menu.quick-add .icon
-{
+.list-menu-float .icon-menu.quick-add .icon{
 	background-color: red !important;
 	color: green !important;
-
-
-
 }
 
 .list-menu-float .icon-menu.quick-add .text
