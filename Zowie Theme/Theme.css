@@ -1,6 +1,6 @@
 /*==============================*\
 | "Zowie" by ShaggyZE            |
-| R0.1                           |
+| R0.2                           |
 | == = == THEME CONTENTS == = == |
 
 ! IMPORTS
@@ -129,112 +129,112 @@
 /* BACKGROUND */
 
 body {
-background-color: teal;
+background-color: var(--bg) !important;
 }
 
 /* HEADER */
 
 .header {
-background-color: pink;
+background-color: pink !important;
 }
 
 .header .header-menu {
 /* "Viewing someone's list" */
-background-color: gray;
+background-color: gray !important;
 }
 
 .header .header-title {
 /* MyAnimeList Logo */
-background-color: green;
+background-color: green !important;
 }
 
 /* LIST MENU */
 
 .list-menu-float {
-border: 3px solid red;
+border: 3px solid red !important;
 }
 
 .list-menu-float .icon-menu {
 /* All list menu buttons */
-background-color: green;
+background-color: green !important;
 }
 
 .list-menu-float .icon-menu.anime-list {
 /* Specific list menu button */
-background-color: blue;
+background-color: blue !important;
 }
 
 /* LIST CONTAINER */
 
 #list-container {
-background-color: purple;
+background-color: purple !important;
 }
 
 /* IMAGE BLOCK */
 
 .cover-block {
-background-color: red;
+background-color: red !important;
 }
 
 .cover-block #cover-image {
 /* Cover image */
-border: 6px solid green;
+border: 6px solid green !important;
 }
 
 .cover-block .image-container .btn-list-setting {
 /* Settings button */
-background-color: yellow;
+background-color: yellow !important;
 }
 
 /* STATUS MENU */
 
 #status-menu {
-background-color: wheat;
+background-color: wheat !important;
 }
 
 #status-menu .status-button {
 /* All status buttons */
-background-color: white;
+background-color: white !important;
 }
 
 #status-menu .status-button.watching {
 /* Specific status button */
-background-color: brown;
+background-color: brown !important;
 }
 
 /* SEARCH */
 
 .status-menu-container .search-container {
-background-color: orange;
+background-color: orange !important;
 }
 
 /* LIST UNIT */
 
 .list-unit {
-border: 3px solid red;
+border: 3px solid red !important;
 }
 
 /* STATUS TITLE */
 
 .list-unit .list-status-title {
-background-color: blue;
+background-color: blue !important;
 }
 
 /* STATS */
 
 #show-stats-button {
 /* Duh */
-background-color: teal;
+background-color: teal !important;
 }
 
 #advanced-options-button {
 /* Duh */
-background-color: lime;
+background-color: lime !important;
 }
 
 .list-unit .list-stats {
 /* Stat bar */
-background-color: orange;
+background-color: orange !important;
 }
 
 /* LIST TABLE */
@@ -242,150 +242,150 @@ background-color: orange;
 /* Sort row */
 
 .list-table .list-table-header {
-border: 3px solid yellow;
+border: 3px solid yellow !important;
 }
 
 .list-table .list-table-header .header-title {
 /* All sort cells */
-background-color: green;
+background-color: green !important;
 }
 
 .list-table .list-table-header .header-title.title {
 /* Specific sort cell */
-background-color: orange;
+background-color: orange !important;
 }
 
 /* Data rows */
 
 .list-table tbody.list-item {
-border: 3px solid pink;
+border: 3px solid pink !important;
 }
 
 .list-table .list-table-data .data {
 /* All data cells */
-background-color: cyan;
+background-color: cyan !important;
 }
 
 .list-table .list-table-data .data.score {
 /* Specific data cell */
-background-color: wheat;
+background-color: wheat !important;
 }
 
 .list-table .list-table-data .data.title .link {
 /* Anime titles */
-color: magenta;
+color: magenta !important;
 }
 
 .add-edit-more {
-background-color: red;
+background-color: red !important;
 }
 
 /* LOADING SPACE */
 
 .list-unit .loading-space {
-background-color: blue;
+background-color: blue !important;
 }
 
 /* FOOTER */
 
 footer {
-background-color: orange;
+background-color: orange !important;
 }
 
 
 /* MORE SEPARATION FOR INSPECT ELEMENT USERS */
 .list-table .list-table-header .header-title.image {
-    background-color: red;
+    background-color: red !important;
 }
 
 .list-table .list-table-header .header-title.number {
-    background-color: aliceblue;
+    background-color: aliceblue !important;
 }
 
 .list-table .list-table-header .header-title.score {
-    background-color: purple;
+    background-color: purple !important;
 }
 
 .list-table .list-table-header .header-title.type{
-  background-color: orange;
+  background-color: orange !important;
 }
 
 .list-table .list-table-header .header-title.progress{
-  background-color: silver;
+  background-color: silver !important;
 }
 
 .list-table .list-table-header .header-title.tags{
-background-color: gold;}
+background-color: gold !important;}
 
 .list-table .list-table-header .header-title.rated{
-background-color: blue;}
+background-color: blue !important;}
 
 .list-table .list-table-header .header-title.started{
-background-color: red;}
+background-color: red !important;}
 
 
 
 .list-table .list-table-header .header-title.finished{
-background-color: yellow;}
+background-color: yellow !important;}
 
 
 .list-table .list-table-header .header-title.days{
-background-color: grey;}
+background-color: grey !important;}
 
 
 .list-table .list-table-header .header-title.storage{
-background-color: white;}
+background-color: white !important;}
 
 
 .list-table .list-table-header .header-title.priority{
-background-color: orange;}
+background-color: orange !important;}
 
 .list-table .list-table-data .data.number{
-background-color: white;}
+background-color: white !important;}
 
 .list-table .list-table-data .data.title{
-background-color: orange;}
+background-color: orange !important;}
 
 .list-table .list-table-data .data.type{
-background-color: green;}
+background-color: green !important;}
 
 .list-table .list-table-data .data.progress{
-background-color: violet;}
+background-color: violet !important;}
 
 .list-table .list-table-data .data.rated{
-background-color: yellow;}
+background-color: yellow !important;}
 
 .list-table .list-table-data .data.storage{
-background-color: red;}
+background-color: red !important;}
 
 .list-table .list-table-data .data.licensor{
-background-color: black;}
+background-color: black !important;}
 
 .list-table .list-table-data .data.studio{
-background-color: silver;}
+background-color: silver !important;}
 
 .list-table .list-table-data .data.title.clearfix{
-  background-color: beige;
+  background-color: beige !important;
 }
 
 #status-menu .status-button.completed{
-  background-color: silver;
+  background-color: silver !important;
 }
 
 #status-menu .status-button.onhold{
-  background-color: gold;
+  background-color: gold !important;
 }
 
 #status-menu .status-button.dropped{
-  background-color: green;
+  background-color: green !important;
 }
 
 #status-menu .status-button.plantowatch{
-  background-color: red;
+  background-color: red !important;
 }
 
 #status-menu .status-button.all_anime{
-  background-color: aquamarine;
+  background-color: aquamarine !important;
 }
 
 .list-menu-float .icon-menu.profile
@@ -415,7 +415,7 @@ background-color: silver;}
 
 #copyright:after {
 /* Custom copyright text */
-content: "Color-coded starter layout by Shishio-kun & Doomcat55.";
+content: "Color-coded starter layout by Shishio-kun & Doomcat55." !important;
 }
 
 
@@ -714,7 +714,7 @@ content: "Color-coded starter layout by Shishio-kun & Doomcat55.";
 }/* CATEGORY BUTTONS */
 
 .status-menu-container{
-background-color: purple;	
+background-color: purple !important;	
 
 
 
@@ -724,42 +724,42 @@ background-color: purple;
 a.status-button.all_anime,
 a.status-button.all_manga{
 	color: red !important;
-	background-color: lime;
+	background-color: lime !important;
 
 
 
 }
 a.status-button.watching{
 	color: orange !important;
-		background-color: white;
+		background-color: white !important;
 
 
 
 }
 a.status-button.completed{
 	color: green !important;
-			background-color: orange;
+			background-color: orange !important;
 
 
 
 }
 a.status-button.onhold {
-	color: brown !Important;
-			background-color: red;
+	color: brown !important;
+			background-color: red !important;
 
 
 
 }
 a.status-button.dropped{
 	color: blue !important;
-				background-color: silver;
+				background-color: silver !important;
 
 
 }
 a.status-button.plantowatch,
 a.status-button.plantoread{
 	color: purple !important;
-	background-color: yellow;
+	background-color: yellow !important;
 
 
 
@@ -785,7 +785,7 @@ a.status-button.plantoread{
 /* CATEGORY HEADER FONT */
 .list-unit .list-status-title .text {
 	color: orangered !important;
-	background-color: black;
+	background-color: black !important;
 
 
 
@@ -812,7 +812,7 @@ color: red !important;
 /* LIST STATS*/
 .list-unit .list-stats{
 	color: red !important;
-	background-color: grey;
+	background-color: grey !important;
 
 
 
