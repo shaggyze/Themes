@@ -1,8 +1,8 @@
 {
 	"json_version": 0.2,
 	"data": {
-		"name": "Clarity",
-		"author": "Valerio Lyndon",
+		"name": "Zowie",
+		"author": "ShaggyZE",
 		"css": "https://shaggyze.github.io/Themes/Zowie%20Theme/Theme.css",
 		"type": "modern",
 		"help": "https://myanimelist.net/forum/?topicid=1723114",
@@ -540,6 +540,22 @@
 				"description": "Want to explain your tag system to your list visitors, or perhaps just remind yourself? Tag descriptions can be useful! Check the linked guide for information on how to.",
 				"url": "https://github.com/ValerioLyndon/MAL-Public-List-Designs/wiki/Add-tag-descriptions-on-hover.",
 				"tags": ["tags", "in-depth customisation"]
+			},
+			"synopsis": {
+				"name": "Synopsis",
+				"description": "Adds synopsis on hover",
+				"css": {
+					"import": "@\\import \"https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css\";",
+					"bottom": "https://shaggyze.github.io/Themes/Mod%20-%20Synopsis.css"
+				},
+				"options": {
+					"import-url": {
+					"name": "URL to your CSS",
+					"type": "text",
+					"replacements": [["\"https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css\"", "\"{{{insert}}}\""]],
+					"default": "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css"
+					}
+				}
 			}
 		}
 	}
