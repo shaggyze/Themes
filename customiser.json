@@ -1,12 +1,12 @@
 {
-"json_version": 0.2,
-"themes": {
-"zowie": {
-"name": "Zowie",
-"author": "ShaggyZE",
-"image": "https://i.imgur.com/6nh4NhC.png",
-"type": "modern",
-"url": "https://shaggyze.github.io/Themes/Zowie%20Theme/zowie.css"
-}
-}
+	"json_version": 0.2,
+	"themes": {
+		"zowie": {
+			"name": "Zowie",
+			"author": "ShaggyZE",
+			"image": "https://i.imgur.com/6nh4NhC.png",
+			"type": "modern",
+			"url": "https://shaggyze.github.io/Themes/Zowie%20Theme/zowie.css"
+		}
+	}
 }
