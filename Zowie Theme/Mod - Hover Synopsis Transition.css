@@ -1,0 +1,10 @@
+/*-S-T-A-R-T--------------------*\
+| Synopsis Transition R0.1       |
+\*------------------------------*/
+.list-table .list-table-data .data.tags {
+	transition: opacity 1s linear, left 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s linear, left 1s ease-in-out, transform 1s ease-in-out;
+	transition: opacity 1s linear, left 1s ease-in-out, transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	-webkit-transition: opacity 1s linear, left 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+/*------------------------E-N-D-*/

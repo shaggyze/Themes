@@ -3,1272 +3,1718 @@
 | R0.3                           |
 | == = == THEME CONTENTS == = == |
 
-! IMPORTS
 
-! OPTIMIZATIONS
-? repeated code & more
-@ Variables
-@ Transitions
-@ Nav-Buttons
+/*@\import "https://dl.dropboxusercontent.com/s/42j6pz0965kuq4a/malimages.css";*/
+@\import "https://malscraper.azurewebsites.net/covers/anime/ShaggyZE/presets/dataimagelinkbefore";
+@\import "https://malscraper.azurewebsites.net/covers/manga/ShaggyZE/presets/dataimagelinkbefore";
 
-! PAGE-BASE
-? generic containers
+@\import "https://dl.dropboxusercontent.com/s/ufllubnni03ev36/malmusicvideos.css";
 
-! HEADER
-@ Cover
-@ Nav-Main
-? main Bar
-@ Nav-Buttons-Top
-? located above main bar
-@ Nav-Buttons-L
-? below main bar on left
-@ Nav-Buttons-R
-? below main bar on right
-@ Sort-By
-? sort menu
+@\import "https://dl.dropboxusercontent.com/s/8m53aw8fsenb98u/maltags3.css";
+@\import "https://dl.dropboxusercontent.com/s/896gv41033tisvo/Mini-Review%20ShaggyZE.css";
 
-! LIST
-? anime/manga listings
-@ Base
-@ Status
-@ Number
-@ Image
-? image/number
-@ Title
-? title/type
-@ Score
-@ Progress
-@ Priority
-@ Generic-Columns
-? rated/magazine/storage/season
-@ Tags
-? tags/studio/licensors
-@ Dates
-? started/finished/airing/etc
-@ More-Info
-
-! FOOTER
-
-! OVERLAYS
-? overlayed menus and iframes
-@ Base
-@ iframes
-@ Filter-Menu
-
-\*==============================*/
-
-
-
-
-/*==============================*\
-  !IMPORTS
-\*==============================*/
-
-@\import "https://fonts.googleapis.com/css?family=Oswald";
-@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/resources/font-awesome-4.7.0/css/font-awesome-force-legacy.min.css";
-
-
-
-
-
-/*==============================*\
-  !OPTIMIZATIONS @Variables
-\*==============================*/
 
 :root {
-	/* Primary Customization */
-	--name: none;
-	--avatar: none;
-	--banner: url(https://i.imgur.com/VoPJz2S.jpg);
-	--character: url(https://i.imgur.com/6IPyngH.png);
+	--bg: #1C1C1C;
+    --text: #FFFFFF;
+	--link: #FFFFFF;
+	--link-hover: #333333;
+	--header-text: #FFFFFF;
+	--header-table-bg: #F6F6F6;
+	--header-table-text: #000000;
+	--warn-text: #FF0000;
+	--icons: #FFFFFF;
+	--icons-hover: #333333;
+	--status-button-on: #787878;
+	--scrollbar: var(--text);
+	--scrollbar-hover: var(--status-button-on);
+	--scrollbar-border: var(--header-table-bg);
+	--scrollbar-shadow: var(--header-table-bg);
+
+	--cover-bg: transparent;
+	--banner: none;
 	--background: none;
-
-	/* Generic Colours */
-	--pbg: #efefef;
-	--bg: #fff;
-	--bg-dark: #ddd;
-	--text: #323232;
-	--text-h: #787878;
-	--text-dim: #bababa;
-	--text-dim-h: #646464;
-	--text-dark: #111;
-	--shadow: rgba(0,0,0,0.2);
-	--icon: #323232;
-	--accent: #4065ba;
-	--banner-text: #fff;
-	--banner-text-shadow: rgba(0,0,0,0.45);
-
-	/* Button Colours */
-	--btn-bg: #ebebeb;
-	--btn-bg-h: #323232;
-	--btn-head-bg-h: #1d439b;
-	--btn-text-h: #fff;
-
-	/* Header Colours */
-	--text-head: #9b9b9b;
-	--text-head-h: #787878;
-
-	/* Status Colours */
-	--watching: #2db039;
-	--completed: #26448f;
-	--onhold: #f1c83e;
-	--dropped: #a12f31;
-	--plantowatch: #c3c3c3;
-
-	/* Single-Use Colours */
-	--cover-bg: #323232;
-	--edit-btn: #d9d9d9;
-	--checkmark: #9696eb;
-
-	/* Other */
-	--font-1: Arial, Verdana, "FontAwesome 4", FontAwesome, sans-serif;
-	--font-2: Verdana, Arial, "FontAwesome 4", FontAwesome, sans-serif;
-	--font-icon: "FontAwesome 4", FontAwesome;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* BACKGROUND */
-
+/* Body */
 body {
-background-color: var(--bg) !important;
+	background-image: var(--background);
+	background-color: var(--bg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+}
+/* Scrollbar */
+body {
+  scrollbar-face-color: var(--scrollbar);
+  scrollbar-highlight-color: transparent;
+  scrollbar-3dlight-color: transparent;
+  scrollbar-darkshadow-color: var(--scrollbar-shadow);
+  scrollbar-shadow-color: var(--scrollbar-shadow);
+  scrollbar-arrow-color: var(--scrollbar);
+  scrollbar-track-color: transparent;
 }
 
-/* HEADER */
+/* customize scrollbar css */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
 
+::-webkit-scrollbar:horizontal {
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px var(--scrollbar-border) solid;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 6px var(--scrollbar-shadow) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar);
+  border: 1px solid var(--scrollbar-border);
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-hover);
+  border: 1px solid var(--scrollbar-border);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--scrollbar);
+  border: 1px solid var(--scrollbar-border);
+}
+a {
+    color: var(--link);
+}
+a:hover {
+    color: var(--link-hover) !important;
+}
+/* Header */
 .header {
-background: var(--bg) !important;
-color: var(--text) !important;
+    position: fixed;
+    width: 50%;
 }
-
-.header .header-menu {
-/* "Viewing someone's list" */
-background-color: gray !important;
-}
-
 .header .header-title {
-/* MyAnimeList Logo */
-background-color: green !important;
-color: var(--text) !important;
-}
-
-/* LIST MENU */
-
-.list-menu-float {
-border: 3px solid red !important;
-}
-
-.list-menu-float .icon-menu {
-/* All list menu buttons */
-background-color: green !important;
-}
-
-.list-menu-float .icon-menu.anime-list {
-/* Specific list menu button */
-background-color: blue !important;
-}
-
-/* LIST CONTAINER */
-
-#list-container {
-background-color: purple !important;
-}
-
-/* IMAGE BLOCK */
-
-.cover-block {
-background-color: red !important;
-}
-
-.cover-block #cover-image {
-/* Cover image */
-border: 6px solid green !important;
-}
-
-.cover-block .image-container .btn-list-setting {
-/* Settings button */
-background-color: yellow !important;
-}
-
-/* STATUS MENU */
-
-#status-menu {
-background-color: wheat !important;
-}
-
-#status-menu .status-button {
-/* All status buttons */
-background-color: white !important;
-}
-
-#status-menu .status-button.watching {
-/* Specific status button */
-background-color: brown !important;
-}
-
-/* SEARCH */
-
-.status-menu-container .search-container {
-background-color: orange !important;
-}
-
-/* LIST UNIT */
-
-.list-unit {
-border: 3px solid red !important;
-}
-
-/* STATUS TITLE */
-
-.list-unit .list-status-title {
-background-color: blue !important;
-}
-
-/* STATS */
-
-#show-stats-button {
-/* Duh */
-background-color: teal !important;
-}
-
-#advanced-options-button {
-/* Duh */
-background-color: lime !important;
-}
-
-.list-unit .list-stats {
-/* Stat bar */
-background-color: orange !important;
-}
-
-/* LIST TABLE */
-
-/* Sort row */
-
-.list-table .list-table-header {
-border: 3px solid yellow !important;
-}
-
-.list-table .list-table-header .header-title {
-/* All sort cells */
-background-color: green !important;
-}
-
-.list-table .list-table-header .header-title.title {
-/* Specific sort cell */
-background-color: orange !important;
-}
-
-/* Data rows */
-
-.list-table tbody.list-item {
-border: 3px solid pink !important;
-}
-
-.list-table .list-table-data .data {
-/* All data cells */
-background-color: cyan !important;
-}
-
-.list-table .list-table-data .data.score {
-/* Specific data cell */
-background-color: wheat !important;
-}
-
-.list-table .list-table-data .data.title .link {
-/* Anime titles */
-color: magenta !important;
-}
-
-.add-edit-more {
-background-color: red !important;
-}
-
-/* LOADING SPACE */
-
-.list-unit .loading-space {
-background-color: blue !important;
-}
-
-/* FOOTER */
-
-footer {
-background-color: orange !important;
-}
-
-
-/* MORE SEPARATION FOR INSPECT ELEMENT USERS */
-.list-table .list-table-header .header-title.image {
-    background-color: red !important;
-}
-
-.list-table .list-table-header .header-title.number {
-    background-color: aliceblue !important;
-}
-
-.list-table .list-table-header .header-title.score {
-    background-color: purple !important;
-}
-
-.list-table .list-table-header .header-title.type{
-  background-color: orange !important;
-}
-
-.list-table .list-table-header .header-title.progress{
-  background-color: silver !important;
-}
-
-.list-table .list-table-header .header-title.tags{
-background-color: gold !important;}
-
-.list-table .list-table-header .header-title.rated{
-background-color: blue !important;}
-
-.list-table .list-table-header .header-title.started{
-background-color: red !important;}
-
-
-
-.list-table .list-table-header .header-title.finished{
-background-color: yellow !important;}
-
-
-.list-table .list-table-header .header-title.days{
-background-color: grey !important;}
-
-
-.list-table .list-table-header .header-title.storage{
-background-color: white !important;}
-
-
-.list-table .list-table-header .header-title.priority{
-background-color: orange !important;}
-
-.list-table .list-table-data .data.number{
-background-color: white !important;}
-
-.list-table .list-table-data .data.title{
-background-color: orange !important;}
-
-.list-table .list-table-data .data.type{
-background-color: green !important;}
-
-.list-table .list-table-data .data.progress{
-background-color: violet !important;}
-
-.list-table .list-table-data .data.rated{
-background-color: yellow !important;}
-
-.list-table .list-table-data .data.storage{
-background-color: red !important;}
-
-.list-table .list-table-data .data.licensor{
-background-color: black !important;}
-
-.list-table .list-table-data .data.studio{
-background-color: silver !important;}
-
-.list-table .list-table-data .data.title.clearfix{
-  background-color: beige !important;
-}
-
-#status-menu .status-button.completed{
-  background-color: silver !important;
-}
-
-#status-menu .status-button.onhold{
-  background-color: gold !important;
-}
-
-#status-menu .status-button.dropped{
-  background-color: green !important;
-}
-
-#status-menu .status-button.plantowatch{
-  background-color: red !important;
-}
-
-#status-menu .status-button.all_anime{
-  background-color: aquamarine !important;
-}
-
-.list-menu-float .icon-menu.profile
-
-.list-menu-float .icon-menu.quick-add {
-    background:purple !important;}
-    
-    
-    .list-menu-float .icon-menu.anime-list  {
-    background: teal !important;}
-    
-    .list-menu-float .icon-menu.manga-list{
-    background: cyan !important;}
-    
-    
-.list-menu-float .icon-menu.history{
-    background: yellow !important;}
-
-.list-menu-float .icon-menu.export{
-    background: lime !important;}
-
-.list-menu-float .icon-menu.logout{
-    background: violet !important;}
-
-.list-menu-float .icon-menu.setting{
-    background: orange !important;}
-
-#copyright:after {
-/* Custom copyright text */
-content: "Color-coded starter layout by Shishio-kun & Doomcat55." !important;
-}
-
-
-/* HEADER NON-LINKS */
-.header *{
-	color: red !important;
-}
-
-.header .header-menu .btn-menu{
-	color: black !important;
-}
-.header .header-menu .header-info{
-	color: blue !important;
-}
-
-/* HEADER LINKS*/
-.header .header-menu *{
-	color: purple !important;
-}
-
-#header-menu-button{
-	color: orange !important;
-}
-
-.header .header-menu a{
-	color: green !important;
-}
-
-.header .header-title{
-	background-color: green !important;
-}
-
- /* SIDE MENU */
-
-.list-menu-float{
-
-}
-
-/* SIDE MENU USER AVATAR */
-.list-menu-float .icon-menu.profile{
-
-}
-
-
-/* QUICK ADD PARTS*/
-.list-menu-float .icon-menu.quick-add .icon{
-	background-color: red !important;
-	color: green !important;
-}
-
-.list-menu-float .icon-menu.quick-add .text
-{
-	background-color: orange !important;
-	color: green !important;
-
-
-
-}
-
-.list-menu-float .icon-menu.quick-add
-{
-	background-color: green !important;
-
-
-
-}
-
-
-
-
-
-/* ANIME LIST LINK*/
-.list-menu-float .icon-menu.anime-list .icon
-{
-	background-color: orange !important;
-	color: green !important;
-
-
-
-}
-
-
-.list-menu-float .icon-menu.anime-list .text
-{
-	background-color: orange !important;
-	color: green !important;
-
-
-
-}
-
-
-.list-menu-float .icon-menu.anime-list
-{
-	background-color: green !important;
-
-
-
-}
-
-
-/* MANGA LIST LINK*/
-.list-menu-float .icon-menu.manga-list .icon
-{
-	background-color: silver !important;
-	color: green !important;
-
-
-
-}
-
-
-.list-menu-float .icon-menu.manga-list .text
-{
-	background-color: orange !important;
-	color: green !important;
-
-
-
-}
-
-
-.list-menu-float .icon-menu.manga-list 
-{
-	background-color: green !important;
-
-
-
-}
-
-
-
-/* HISTORY LINK*/
-.list-menu-float .icon-menu.history .icon
-{
-	background-color: blue !important;
-	color: green !important;
-
-
-
-}
-
-
-.list-menu-float .icon-menu.history .text
-{
-	background-color: orange !important;
-	color: green !important;
-
-
-
-}
-
-
-.list-menu-float .icon-menu.history
-{
-	background-color: green !important;
-
-
-
-}
-
-
-
-/* EXPORT LINK*/
-.list-menu-float .icon-menu.export .icon
-{
-	background-color: yellow !important;
-	color: green !important;
-
-
-
-}
-
-
-.list-menu-float .icon-menu.export .text
-{
-	background-color: orange !important;
-	color: green !important;
-
-
-
-}
-
-.list-menu-float .icon-menu.export
-{
-	background-color: green !important;
-
-
-
-}
-
-
-
-/* LOGOUT LINK*/
-.list-menu-float .icon-menu.logout .icon
-{
-	background-color: cyan !important;
-	color: green !important;
-
-
-
-}
-
-.list-menu-float .icon-menu.logout .text
-{
-	background-color: orange !important;
-	color: green !important;
-
-
-
-}
-
-
-.list-menu-float .icon-menu.logout
-{
-	background-color: green !important;
-
-
-
-}
-
-
-/* SETTINGS */
-.list-menu-float .icon-menu.setting .icon
-{
-	background-color: white !important;
-	color: green !important;
-
-
-
-}
-
-.list-menu-float .icon-menu.setting .text
-{
-	background-color: orange !important;
-	color: green !important;
-
-
-
-}
-
-
-.list-menu-float .icon-menu.setting
-{
-	background-color: green !important;
-
-
-
-}
-
-.list-menu-float .icon-menu.setting:hover .text .link-list-setting{
-	background-color: purple !important;
-
-
-
-} 
-.list-menu-float .icon-menu.setting:hover .text .link-style-setting
-{
-	background-color: orange !important;
-
-
-
-}/* CATEGORY BUTTONS */
-
-.status-menu-container{
-background-color: purple !important;	
-
-
-
-}
-
-
-a.status-button.all_anime,
-a.status-button.all_manga{
-	color: red !important;
-	background-color: lime !important;
-
-
-
-}
-a.status-button.watching{
-	color: orange !important;
-		background-color: white !important;
-
-
-
-}
-a.status-button.completed{
-	color: green !important;
-			background-color: orange !important;
-
-
-
-}
-a.status-button.onhold {
-	color: brown !important;
-			background-color: red !important;
-
-
-
-}
-a.status-button.dropped{
-	color: blue !important;
-				background-color: silver !important;
-
-
-}
-a.status-button.plantowatch,
-a.status-button.plantoread{
-	color: purple !important;
-	background-color: yellow !important;
-
-
-
-}
-
-
-/* SEARCH BUTTON*/
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	visibility: hidden;
+}
+.header .header-info, #mal_cs_otherlinks {
+    position: fixed;
+    top: 55px;
+    left: 245px;
+}
+/* Status Menu */
+.status-menu-container {
+    height: 0px ;
+}
+#status-menu > div {
+    display: block !important;
+    margin-top: -135px;
+    position: fixed;
+}
+.status-menu-container .status-menu .status-button {
+    color: var(--link);
+}
+.status-button.on {
+    color: var(--status-button-on);
+}
+.status-menu-container .status-menu .status-button:hover {
+    color: var(--link-hover);
+}
+/* Search */
 .status-menu-container .search-container #search-button{
-	color: grey !important;
-
-
+     font-size: 15px;
+     position: fixed !important;
+     top: 0px !important;
+     left: 792px !important;
+}
+ .status-menu-container .search-container #search-box input {
+     position: fixed !important;
+     top: 10px !important;
+     left: 613px !important;
+     width: 200px;
+	 height: 25px;
+}
+/* List Menu */
+.list-menu-float {
+    position: fixed;
+    display: block;
+	left: 245px;
+    top: 0px;
+    height: 50px;
+    width: 355px;
+	border: 0px;
+	z-index: 0;
+}
+.list-menu-float {
+	background-color: transparent;
+}
+.list-menu-float .icon-menu:not(.profile) {
+	width: 40px !important;
+	height: 40px;
+	padding-right: 5.5px !important;
+	padding-bottom: 7.5px !important;
+}
+.list-menu-float .icon-menu {
+	background-color: rgba(34, 28, 28, .8) !important;
+	border-radius: 4px;
+}
+.list-menu-float .icon-menu svg.icon {
+	fill: var(--icons) !important;
+}
+.list-menu-float .icon-menu:hover svg.icon {
+	fill: var(--icons-hover) !important;
+}
+.list-menu-float .icon-menu.quick-add {
+    position: fixed;
+    top: 0;
+    left: 300px;
+}
+.list-menu-float .icon-menu.anime-list {
+    position: fixed;
+    top: 0;
+    left: 350px;
+}
+.list-menu-float .icon-menu.manga-list {
+    position: fixed;
+    top: 0;
+    left: 400px;
+}
+.list-menu-float .icon-menu.history {
+    position: fixed;
+    top: 0;
+    left: 450px;
+}
+.list-menu-float .icon-menu.export {
+    position: fixed;
+    top: 0;
+    left: 500px;
+}
+.list-menu-float .icon-menu.logout {
+    position: fixed;
+    top: 0;
+    left: 550px;
+}
+.list-menu-float .icon-menu .text, .list-menu-float .icon-menu:not(.profile):hover {
+    background-color:transparent;
+    font-size: 0;
+    width: 50px;
+    transition: none;
 
 }
+.list-menu-float .icon-menu.setting {
+    display: none !important;
+}
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting, .list-menu-float .icon-menu.setting:hover .text .link-style-setting {
+    background-color: transparent;
+}
 
-.status-menu-container .search-container #search-box input {
-
-    background: black !important;
-    color: red !important;
-
-
+/* btn Menu */
+.header .header-menu .btn-menu  {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+/* Cover Block */
+.cover-block {
+	position: fixed;
+	top: 90px;
+	left: 0px;
+	width: 50% !important;
+    min-width: 50% !important;
+    height: 280px !important;
+	background: var(--cover-bg) var(--banner) no-repeat center center / cover scroll;
+    background-repeat: no-repeat;
+    background-size: contain !important;
+	z-index: 0 !important;
+}
+.cover-block .image-container {
+	position: fixed;
+	top: 74px;
+	left: 0px;
+	width: 50%;
+}
+#cover-image {
+	width: 100%;
+}
+/* List Status Title */
+.list-unit .list-status-title  {
+    margin-top: -40px;
+    position: fixed;
+    width: 50%;
+	background-color: transparent;
 
 }
-/* CATEGORY HEADER FONT */
 .list-unit .list-status-title .text {
-	color: orangered !important;
-	background-color: black !important;
+	color: var(--header-text);
+}
+/* Stats */
+.list-unit .list-status-title .stats {
+    right: 0px;
+    position: absolute;
+}
+.list-stats { position: fixed; display: block !important; left: 50%; width: 50% !important; top: 57.5px !important; bottom: auto !important; color: var(--text); background-color: rgba(0,0,0,.5) !important; border-radius: 16px; }
+.stats a:first-of-type { display: none !important; }
 
-
-
+/* List Table Header */
+.list-table .list-table-header .header-title, .list-table .list-table-header .header-title .link, .list-table .list-table-header .header-title .link.sort {
+	color: var(--header-table-text);
+}
+.list-table[data-items="[]"] .list-table-header {
+    display: none !important;
+}
+.list-table .list-table-header .header-title {
+	background: var(--header-table-bg) url(/img/pc/ownlist/bar-table-header.png) no-repeat right 7px / 1px 22px;
+	position: sticky;
+    top: -1vh;
+}
+.sort-icon {
+    color: var(--header-table-text) !important;
+    font-size: 14px !important;
+}
+.list-table .list-table-header .header-title .link.sort:hover {
+    color: #333333;
+}
+/* List Container */
+.list-container {
+    margin-top: 120px;
+    padding-top: 0px;
+    position: fixed;
+    width: 50%;
+    height: 85%;
+    right: 0;
+    overflow-y:scroll;
+    overflow-x: auto;
+    background-color: rgba(0, 0, 0, .3);
+}
+.list-table > tbody:nth-of-type(2n+1) {
+	background-color: transparent;
+}
+.list-block, .list-unit {
+	margin-top: 0px;
+	width: 100% !important;
+	max-width:100% !important;
+	padding: 0px !important;
+	padding-right: 0px !important;
+}
+/* Search/Empty Message */
+.list-table[data-items="[]"]:before{content:"No entries found. Try another category?";display:block;background-color:rgba(0, 0, 0, .5);border-radius:16px;margin:32px auto;color:var(--warn-text);font:16px/32px Segoe UI;font-weight:bold;text-align:center}
+[data-owner="1"] .list-table[data-items="[]"]:before{content:"No entries found. Why not add some?"}
+[data-query*='"s":'] .list-table[data-items="[]"]:before{content:"No entries found. Perhaps your search terms are too restrictive?"}
+/* List Items */
+.list-table .list-table-data .data.status {
+    min-width: 6px;
+}
+.list-table .list-table-data .data.title {
+    padding-left: 8px;
+    text-align: left;
+    word-wrap: normal !important;
+	min-width: 400px !important;
+}
+.list-table .list-table-data .data.title .link {
+    font-size: 1.3em;
+}
+.data.title .link.sort {
+	white-space: normal !important;
 }
 
+.more-info .td1 {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: var(--text) !important;
+}
+.list-table .list-table-data .data.score .link {
+    font-size: 1.5em;
+}
+.list-table .list-table-data .data {
+    /*border-bottom: none;*/
+}
+td {
+    color: #FFFFFF;
+}
+/* Remove PV Icons */
+.malicon{display:none !important;}
 
-/* STATS AND FILTERS*/
-
-a#show-stats-button{
-	color: orange !important;
 
 
-
+/*-S-T-A-R-T--------------------*\
+| Large Full-Res Cover Hover R0.1|
+\*------------------------------*/
+@media all and (orientation: landscape) {
+.data.image a:before {
+  content: "";
+  display: block !important;
+  position: fixed;
+  top: 8%;
+  left:50%;
+  width: 13%;
+  height: 33% !important;
+  background-color: rgba(0,0,0,.3);
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  /* border: 1px solid var(--text); */
+  border-radius: 18px;
+  box-shadow: 0 2px 5px rgba(0,0,0, 0.7);
+  /* visibility: hidden;*/
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  pointer-events: none;
+  z-index: 5;
+}
 }
 
-a#advanced-options-button{
-color: red !important;	
-
-
-
+@media all and (orientation: portrait) {
+.data.image a:before {
+  content: "";
+  display: block !important;
+  position: fixed;
+  top: 5%;
+  left: 2% !important;
+  width: 16%;
+  height: 18.5%;
+  background-color: rgba(0,0,0,.3);
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  border: 1px solid var(--text);
+  border-radius: 18px;
+  box-shadow: 0 2px 5px rgba(0,0,0, 0.7);
+  /* visibility: hidden; */
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  pointer-events: none;
+  z-index: 5;
+}
 }
 
-
-/* LIST STATS*/
-.list-unit .list-stats{
-	color: red !important;
-	background-color: grey !important;
-
-
-
+.list-table .list-table-data:hover .data.image a:before {
+  left: 2%;
+  visibility: visible;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  pointer-events: none;
 }
+/*------------------------E-N-D-*/
 
-
-/* LIST COLUMN HEADERS */
-
-/* NUMBER */   
-th.header-title.number{
-color: red  !important; 
-
-
-
+/*-S-T-A-R-T--------------------*\
+| Large Full-Res Transition R0.1 |
+\*------------------------------*/
+.list-table .list-table-data:hover .data.image a:before {
+  transform: rotate(-720deg) scale(1, 1);
+  -webkit-transform: rotate(-720deg) scale(1, 1);
 }
-/* IMAGE */
-th.header-title.image a{
-color: green  !important; 
+/*------------------------E-N-D-*/
 
-
-
+.data.image a:before {
+  transform: rotate(0deg) scale(0, 0);
+  -webkit-transform: rotate(0deg) scale(0, 0);
+  transition: opacity 2.5s linear, left 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: opacity 2.5s linear, left 1s ease-in-out, transform 1s ease-in-out;
+  transition: opacity 2.5s linear, left 1s ease-in-out, transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-transition: opacity 2.5s linear, left 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
-
-/* TITLE */
-th.header-title.title a{
-color: blue  !important; 
+/*------------------------E-N-D-*/
 
 
-
+/* Footer */
+footer {
+    position: fixed;
+    width: 30%;
+    bottom: 0px;
+	z-index: -1;
 }
-
-/* SCORE */
-th.header-title.score a{
-color: orange  !important; 
-
-
-
+div#footer-block {
+    width: 50% !important;
+	color: var(--text);
+	background-color: transparent;
 }
-
-/* TYPE */
-th.header-title.type a{
-color: purple  !important; 
-
-
-
+#copyright:before {
+  display: block;
+  font-size: 11.5px;
+  color: var(--text);
+  content: 'Zowie by ShaggyZE.';
 }
-
-/* PROGRESS/EPISODES, VOLUMES, CHAPTERS */
-th.header-title.progress a{
-color: violet !important; 
-
-
-
-}
-
-th.header-title.chapters a{
-color: blue  !important; 
-
-
-
-}
-th.header-title.volumes a{
-color: pink  !important; 
-
-
-
-}
-
-
-/* TAGS */
-th.header-title.tags{
-color: grey  !important; 
-
-
-
-}
-
-/* RATING */
-th.header-title.rated a{
-color: lime !important; 
-
-
-
-}
-
-
-/* DATES STARTED*/
-th.header-title.started a{
-color: red !important; 
-
-
-
-}
-
-/* DATES FINISHED */
-th.header-title.finished a{
-color: green !important; 
-
-
-
-}
-
-/* DAYS */
-th.header-title.days{
-color: orangered  !important; 
-
-
-
-}
-
-/* SEASON*/
-th.header-title.started{
-color: grey !important; 
-
-
-
-}
-
-/* STUDIO */
-th.header-title.studio{
-color: magenta  !important; 
-
-
-
-}
-
-/* LICENSOR */
-th.header-title.licensor{
-color: orange !important; 
-
-
-
-}
-
-/* STORAGE */
-th.header-title.storage a{
-color: turquoise !important; 
-
-
-
-}
-
-/* PRIORITY */
-th.header-title.priority a{
-color: cyan !important; 
-
-
-
-}
-
-/* MAGAZINE */
-th.header-title.magazine{
-color: purple !important; 
-
-
-
-}       
-
-/* RETAIL */
-th.header-title.retail{
-color: black !important; 
-
-
-
-}
-
-/* NUMBER */
- .list-table .list-table-data .data.number{
-	color: red !important;
-background-color: orange !important;
-
-
-
-}
-
-
-/* ANIME TITLE */
-.list-table .list-table-data .data.title .link{
-	color: purple !important;
-background-color: orange !important;
-
-
-
-}
-
-/* AIRING, PUBLISHING, ETC*/
-.list-table .list-table-data .data.title .content-status{
-	color: black !important;
-background-color: orange !important;
-
-
-
-}
-
-
-/* EDIT/ADD, little dash between them, and MORE */
-
-.list-table a.List_LightBox{
-	color: blue !important;
-background-color: orange !important;
-
-
-
-}
-
-
-.list-table .list-table-data .data.title .add-edit-more{
-	color: cyan !important;
-background-color: orange !important;
-
-
-
-}
-
-
-.list-table .list-table-data .data.title .more a{
-	color: green !important;
-background-color: orange !important;
-
-
-
-}
-
-
-/* TV ICON*/
-
-
-.icon-watch{
-background-color: orange !important;
-
-
-
-}
-
-/* SCORE*/
-/* SCORE*/
-.list-table .list-table-data .data.score,
-.list-table .list-table-data .data.score *,
-.list-table .list-table-data .data.score .link *{
-	color: gold !important;
-background-color: orange !important;
-
-
-
-}
-/* TAGS */
-.list-table .list-table-data .data.tags a {
-	color: red !important;
-background-color: orange !important;
-
-
-
-}
-/* TAGS EDIT FONT */
-.list-table .list-table-data .tags .edit{
-	color: green !important;
-background-color: orange !important;
-
-
-
-}
-
-
-
-
-/* TYPE */
-.list-table .list-table-data .data.type{
-	color: green !important;
-background-color: orange !important;
-
-
-
-}
-
-
-/* PROGRESS */
-.list-table .list-table-data .data.progress a,
-.list-table .list-table-data .data.progress *{
-	color: blue !important;
-background-color: orange !important;
-
-
-
-}
-
-
-/* RATED*/
-.list-table .list-table-data .data.rated{
-	color: black !important;
-background-color: orange !important;
-
-
-
-}
-
-
-
-/*  USER STARTED AND ENDING DATES*/
-.list-table .list-table-data .data.started{
-	color: purple !important;
-background-color: orange !important;
-
-
-
-}
-.list-table .list-table-data .data.finished{
-	color: red !important;
-background-color: orange !important;
-
-
-
-}
-
-
-
-/* DAYS */
-.list-table .list-table-data .data.days{
-	color: green !important;
-background-color: orange !important;
-
-
-
-}
-
-
-/* SEASON */
-.list-table .list-table-data .data.season a{
-	color: grey !important;
-background-color: orange !important;
-
-
-
-}
-
-
-/* AIRING START AND END DATES */
-.list-table .list-table-data .data.airing-started{
-	color: blue !important;
-background-color: orange !important;
-
-
-
-}
-
-.list-table .list-table-data .data.airing-finished{
-	color: cyan !important;
-background-color: orange !important;
-
-
-
-}
-
-
-/* STUDIO */
-.list-table .list-table-data .data.studio a{
-	color: black !important;
-background-color: orange !important;
-
-
-
-}
-
-
-/* LICENSOR*/
-.list-table .list-table-data .data.licensor a{
-		color: limegreen !important;
-background-color: orange !important;
-
-
-
-	
-}
-
-
-/* STORAGE */
-.list-table .list-table-data .data.storage{
-		color: purple !important;
-background-color: orange !important;
-
-
-
-	
-}
-
-
-/* PRIORITY */
-.list-table .list-table-data .data.priority {
-		color: teal !important;
-background-color: orange !important;
-
-
-
-	
-}
-
-
-
-/* STATUS COLORS IN FRONT OF ROW */
-.list-table .list-table-data .data.status.reading, .list-table .list-table-data .data.status.watching{
-		background-color: blue !important;
-	
-
-
-}
-
-
-.list-table .list-table-data .data.status.completed
-{
-		background-color: red !important;
-	
-
-
-}
-
-
-.list-table .list-table-data .data.status.onhold
-{
-		background-color: white !important;
-	
-
-
-}
-
-
-.list-table .list-table-data .data.status.onhold
-{
-		background-color: orange !important;
-	
-
-
-}
-
-.list-table .list-table-data .data.status.dropped
-{
-		background-color: black !important;
-	
-
-
-}
-
-
-.list-table .list-table-data .data.status.plantowatch,
-.list-table .list-table-data .data.status.plantoread
-{
-		background-color: black !important;
-	
-
-
-}
-
-#footer-block {
-		color: purple !important;
-background-color: orange !important;
-
-
-
-}
-
-
 #copyright {
-		color: purple !important;
-background-color: red !important;
-
-
-
+  color: var(--text);
 }
 
-#recaptcha-terms{
-		color: grey !important;
-background-color: yellow !important;
 
+/*-S-T-A-R-T--------------------*\
+| Mini-Review R0.1               |
+\*------------------------------*/
+@media all and (orientation: landscape) {
+	.list-table .list-table-data:hover .data.title .link:before {
+		bottom: %50;
+	}
+}
 
+.list-table .list-table-data:hover .data.title .link:before {
+	display: block !important;
+	background-position: top left;
+	background-size: contain;
+	background-repeat: no-repeat;
+  position: fixed;
+  color: black;
+	text-shadow: none !important;
+  left: 20% !important;
+	width: 400px;
+  bottom: 30px;
+
+  font-family: arial !important;
+	font-size: 12px;
+	border: white 2px solid;
+	border-radius: 30px;
+	padding: 1%;
+	background-color: white;
+	z-index:10001 !important;
+	  
+	overflow: hidden !important;
 
 }
+/*------------------------E-N-D-*/
+
+
+body > div:nth-child(21) > div {
+    visibility: hidden;
+}
+
+
+/* Music Videos
+/*https://dl.dropboxusercontent.com/s/id7yrz877c18k1h/coming-soon.jpg*/
+@media (min-width: 1360px) and (max-width: 1360px) {
+.list-table .more-info {
+font-size: 11px !important;
+}
+}
+@media all and (orientation: portrait) {
+.link[href^="/anime/"] ~ .add-edit-more .more a {
+left: 2% !important;
+}
+}
+/* The Strongest Sage with the Weakest Crest MUSIC PLAYER*/
+[data-query*='"season":"winter","season_year":2022'] .link[href^="/anime/47161/"] ~ .add-edit-more .more a {
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/id7yrz877c18k1h/coming-soon.jpg) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-47161.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* 86 MUSIC PLAYER*/
+[data-query*='"status":'] .link[href^="/anime/48569/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/tzgryb83ceyezid/86.gif) !important;
+content: "";
+z-index: 2 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 560px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-48569.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* SAO MUSIC PLAYER*/
+[data-query*='"genre":"62'] .link[href^="/anime/11757/"] ~ .add-edit-more .more a, [data-query*='"tag":"Isekai"'] .link[href^="/anime/11757/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/q8v364ardl4ngsw/SAO.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 560px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-11757.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* SAO MUSIC PLAYER*/
+[data-query*='"season":"fall","season_year":2021'] .link[href^="/anime/42916/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/q8v364ardl4ngsw/SAO.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-42916.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+[data-query*='"tag":"Action","genre":2,"demographic":27'] .link[href^="/anime/1157/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/a7s7a127goqyq08/final_fantasy1.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-1157.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Final Fantasy MUSIC PLAYER */
+[data-query*='"order":5'] .link[href^="/anime/408/"] ~ .add-edit-more .more a, [data-query*='"tag":"Final Fantasy"'] .link[href^="/anime/408/"] ~ .add-edit-more .more a, [data-query*='"tag":"VII"'] .link[href^="/anime/408/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/6ppdonsj1pxvlbe/final_fantasy3.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-408.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Final Fantasy MUSIC PLAYER*/
+[data-query*='"tag":"Final Fantasy"'] .link[href^="/anime/2952/"] ~ .add-edit-more .more a, [data-query*='"tag":"VII"'] .link[href^="/anime/2952/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/j905l567vemr1zo/final_fantasy2.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-2952.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Final Fantasy MUSIC PLAYER*/
+[data-query*='tag":"Final Fantasy"'] .link[href^="/anime/317/"] ~ .add-edit-more .more a, [data-query*='"tag":"VII"'] .link[href^="/anime/317/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/a7s7a127goqyq08/final_fantasy1.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 560px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-317.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Re:Zero MUSIC PLAYER*/
+[data-query*='"airing_status":2'] .link[href^="/anime/31240/"] ~ .add-edit-more .more a, [data-query*='"tag":"2016"'] .link[href^="/anime/31240/"] ~ .add-edit-more .more a, [data-query*='"season":"spring","season_year":2016'] .link[href^="/anime/31240/"] ~ .add-edit-more .more a , [data-query*='"season":"winter","season_year":2016'] .link[href^="/anime/31240/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/unyndgla35vlgt3/rezero.gif) !important;
+content: "";
+z-index: 1 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+/* Re:Zero MUSIC PLAYER*/
+[data-query*='"tag":"Re:Zero"'] .link[href^="/anime/31240/"] ~ .add-edit-more .more a, [data-query*='"genre":"62'] .link[href^="/anime/31240/"] ~ .add-edit-more .more a, [data-query*='"tag":"Isekai"'] .link[href^="/anime/31240/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/t734f8lu9wixi6p/rezero2.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-31240.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Re:Zero MUSIC PLAYER*/
+[data-query*='"status":7'] .link[href^="/anime/42203/"] ~ .add-edit-more .more a, [data-query*='"season":"winter","season_year":2021'] .link[href^="/anime/42203/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/unyndgla35vlgt3/rezero.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-42203.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Weathering with you MUSIC PLAYER*/
+[data-query*='"tag":"Fantasy"'] .link[href^="/anime/38826/"] ~ .add-edit-more .more a, [data-query*='"tag":"Romance"'] .link[href^="/anime/38826/"] ~ .add-edit-more .more a, [data-query*='"tag":"CoMix Wave Films"'] .link[href^="/anime/38826/"] ~ .add-edit-more .more a, [data-query*='"tag":"CMT"'] .link[href^="/anime/38826/"] ~ .add-edit-more .more a, [data-query*='"tag":"Score: 9"'] .link[href^="/anime/38826/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/2nq8kie1jxwren7/weathering_with_you.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-38826.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/*Origins MUSIC PLAYER*/
+[data-query*='"tag":"RCD"'] .link[href^="/anime/1140/"] ~ .add-edit-more .more a {
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/e5cgik1hzvxsom2/2021-07-19_19-13-14.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+[data-query*='"tag":"CMT"'] .link[href^="/anime/1140/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/e5cgik1hzvxsom2/2021-07-19_19-13-14.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 740px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-1140.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Sakugan MUSIC PLAYER*/
+[data-query*='"season":"fall","season_year":2021'] .link[href^="/anime/38192/"] ~ .add-edit-more .more a {
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/tnj20lxq1200nbq/2021-07-19_14-39-43.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-38192.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* From Common Job Class to the Strongest in the World 2nd Season MUSIC PLAYER*/
+[data-query*='"airing_status":3'] .link[href^="/anime/40507/"] ~ .add-edit-more .more a, [data-query*='"season":"winter","season_year":2022'] .link[href^="/anime/40507/"] ~ .add-edit-more .more a  {
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/ybxwdor6huhqwo4/2021-07-19_14-28-15.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-40507.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Castle in the Sky MUSIC PLAYER*/
+[data-query*='"tag":"Studio Ghibli"'] .link[href^="/anime/513/"] ~ .add-edit-more .more a, [data-query*='"tag":"Romance"'] .link[href^="/anime/513/"] ~ .add-edit-more .more a {
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/8grgdvhixs55sgz/castle_in_the_sky.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-513.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Princess Mononoke MUSIC PLAYER*/
+[data-query*='"tag":"Studio Ghibli"'] .link[href^="/anime/164/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/u16orclpjhfjs48/princess_mononoke.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-164.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/*Nausicaä of the Valley of the Wind MUSIC PLAYER*/
+[data-query*='"tag":"Studio Ghibli"'] .link[href^="/anime/572/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/15a51k1tk29ef1u/valley_of_the_wind.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 560px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-572.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Howl's Moving Castle MUSIC PLAYER*/
+[data-query*='"tag":"Studio Ghibli"'] .link[href^="/anime/431/"] ~ .add-edit-more .more a, [data-query*='"tag":"Romance"'] .link[href^="/anime/431/"] ~ .add-edit-more .more a {
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/m1r5yqoael794cq/howls.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 740px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-431.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Your Name. MUSIC PLAYER*/
+[data-query*='"tag":"RCD"'] .link[href^="/anime/32281/"] ~ .add-edit-more .more a {
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/zpv35ibvbwyymev/yourname.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+[data-query*='"tag":"Romance"'] .link[href^="/anime/32281/"] ~ .add-edit-more .more a, [data-query*='"tag":"CoMix Wave Films"'] .link[href^="/anime/32281/"] ~ .add-edit-more .more a, [data-query*='"airing_status":2'] .link[href^="/anime/32281/"] ~ .add-edit-more .more a, [data-query*='"tag":"Score: 9"'] .link[href^="/anime/32281/"] ~ .add-edit-more .more a, [data-query*='"status":7'] .link[href^="/anime/32281/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/zpv35ibvbwyymev/yourname.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 20px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-32281.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Peach Boy Riverside MUSIC PLAYER*/
+[data-query*='"airing_status":1'] .link[href^="/anime/42627/"] ~ .add-edit-more .more a, [data-query*='"season":"summer","season_year":2021'] .link[href^="/anime/42627/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/whkbyw94a9evxny/peach_boy-riverside.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-42627.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* How a Realistic Hero Rebuilt a Kingdom MUSIC PLAYER*/
+[data-query*='"airing_status":1'] .link[href^="/anime/41710/"] ~ .add-edit-more .more a, [data-query*='"season":"summer","season_year":2021'] .link[href^="/anime/41710/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/fc6rj2t46vunomx/kingdom.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-41710.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* 3-gatsu no Lion 2nd Season MUSIC PLAYER*/
+[data-query*='"status":1'] .link[href^="/anime/35180/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://puu.sh/HVDSf.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-35180.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* 3-gatsu no Lion 2nd Season MUSIC PLAYER*/
+[data-query*='"tag":"Music"'] .link[href^="/anime/28789/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://puu.sh/HVDSf.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 740px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-28789.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/*Vivy MUSIC PLAYER*/
+[data-query*='"status":1'] .link[href^="/anime/46095/"] ~ .add-edit-more .more a, [data-query*='"season":"spring","season_year":2021'] .link[href^="/anime/46095/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/tgryix3li20m5tv/vivy.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-46095.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+[data-query*='"status":7,"tag":2021'] .link[href^="/anime/46095/"] ~ .add-edit-more .more a {
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/tgryix3li20m5tv/vivy.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-46095.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/*Two Mix MUSIC PLAYER*/
+[data-query*='"tag":"Music"'] .link[href^="/anime/2728/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-color: transparent;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/pkyvcze23lqb0b8/two-mix_white_reflection.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-2728.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/*Shelter MUSIC PLAYER*/
+[data-query*='"airing_status":2'] .link[href^="/anime/34240/"] ~ .add-edit-more .more a, [data-query*='"tag":"Music"'] .link[href^="/anime/34240/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/seh1f72f37vrkzx/shelter.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 380px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-34240.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/*Carole & Tuesday MUSIC PLAYER*/
+[data-query*='"order":5'] .link[href^="/anime/37435/"] ~ .add-edit-more .more a, [data-query*='"tag":"Music"'] .link[href^="/anime/37435/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/s06cmqjbf2rzk50/carole_and_tuesday.gif) !important;
+content: "";
+z-index: 0 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 560px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-37435.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+
+/* manga */
+
+
+/* From Common Job Class to the Strongest in the World 2nd Season MUSIC PLAYER*/
+[data-query*='"status":'] .link[href^="/manga/88923/"] ~ .add-edit-more .more a {
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/ybxwdor6huhqwo4/2021-07-19_14-28-15.gif) !important;
+content: "";
+z-index: 2 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+left: calc(100% - 245px);
+top: 560px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+[data-query*='"tag":"Isekai"'] .link[href^="/manga/88923/"] ~ .add-edit-more .more a {
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/ybxwdor6huhqwo4/2021-07-19_14-28-15.gif) !important;
+content: "";
+z-index: 2 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+left: calc(100% - 245px);
+top: 560px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-88923.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+right: calc(100% - 400px) !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Final Fantasy MUSIC PLAYER*/
+[data-query*='"status":'] .link[href^="/manga/79633/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/a7s7a127goqyq08/final_fantasy1.gif) !important;
+content: "";
+z-index: 2 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+left: calc(100% - 245px);
+top: 740px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-79633.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+right: calc(100% - 400px) !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+
+/* Re:Zero MUSIC PLAYER */
+[data-query*='"status":'] .link[href^="/manga/74697/"] ~ .add-edit-more .more a, [data-query*='"tag":"Fav"'] .link[href^="/manga/74697/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/unyndgla35vlgt3/rezero.gif) !important;
+content: "";
+z-index: 1 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+left: calc(100% - 245px);
+top: 920px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+[data-query*='"tag":"Isekai"'] .link[href^="/manga/74697/"] ~ .add-edit-more .more a, [data-query*='"tag":"Fav"'] .link[href^="/manga/74697/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/unyndgla35vlgt3/rezero.gif) !important;
+content: "";
+z-index: 1 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+left: calc(100% - 245px);
+top: 740px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+[data-query*='"tag":"Fav"'] .link[href^="/manga/74697/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/unyndgla35vlgt3/rezero.gif) !important;
+content: "";
+z-index: 1 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+left: calc(100% - 245px);
+top: 740px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-31240.more-info, .list-table #more-74697.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+right: calc(100% - 400px) !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+
+/* Dr. Stone MUSIC PLAYER */
+[data-query*='"tag":"Isekai"'] .link[href^="/manga/103897/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/zvtar3s64fc9wcp/drstone.gif) !important;
+content: "";
+z-index: 2 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+left: calc(100% - 245px);
+top: 560px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-103897.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+right: calc(100% - 400px) !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/*
+[data-query*='"status":'] .link[href^="/manga/103897/"] ~ .add-edit-more .more a {  
+display: block !important;
+border-radius: 50%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/zvtar3s64fc9wcp/drstone.gif) !important;
+content: "";
+z-index: 2 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+left: calc(100% - 245px);
+top: 200px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+*/

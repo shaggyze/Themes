@@ -7,37 +7,21 @@
 		"type": "modern",
 		"help": "https://myanimelist.net/forum/?topicid=1723114",
 		"flags": ["alpha"],
+		"preview": {
+			"cover": false
+		},
 		"options": {
-			"text": {
-				"name": "Name/Banner Text",
-				"type": "textarea/content",
-				"replacements": [["--name:none;", "--name:{{{insert}}};"]],
-				"default": ""
-			},
-			"avatar": {
-				"name": "Avatar",
-				"description": "[url=https://github.com/ValerioLyndon/MAL-Public-List-Designs/wiki/Clarity#how-to-find-your-myanimelist-avatar-url]Want to use your MyAnimeList avatar?[/url]",
-				"type": "text/image_url",
-				"replacements": [["--avatar:none;", "--avatar:{{{insert}}};"]],
-				"default": ""
-			},
 			"banner": {
 				"name": "Banner",
 				"type": "text/image_url",
 				"replacements": [["--banner:url(https://i.imgur.com/VoPJz2S.jpg);", "}body{--banner:{{{insert}}};}:root{"]],
 				"default": "https://i.imgur.com/VoPJz2S.jpg"
 			},
-			"character": {
-				"name": "Character",
-				"type": "text/image_url",
-				"replacements": [["--character:url(https://i.imgur.com/6IPyngH.png);", "}body{--character:{{{insert}}};}:root{"]],
-				"default": "https://i.imgur.com/6IPyngH.png"
-			},
 			"background": {
 				"name": "Background",
 				"type": "text/image_url",
 				"replacements": [["--background:none;", "--background:{{{insert}}};"]],
-				"default": ""
+				"default": "https://cdn.myanimelist.net/s/common/uploaded_files/1659714746-a2fb60628a7f1aaff30fb6151f3e54a0.jpeg"
 			}
 		},
 		"mods": {
@@ -46,7 +30,7 @@
 				"description": "Adds synopsis on hover",
 				"css": {
 					"import": "@\\import \"https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css\";",
-					"bottom": "https://shaggyze.github.io/Themes/Mod%20-%20Synopsis.css"
+					"bottom": "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis.css"
 				},
 				"options": {
 					"import-url": {
@@ -54,6 +38,10 @@
 					"type": "text",
 					"replacements": [["\"https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css\"", "\"{{{insert}}}\""]],
 					"default": "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css"
+					},
+					"transition": {
+					"name": "Transition",
+					"css": {"bottom": "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css"}
 					}
 				}
 			}
