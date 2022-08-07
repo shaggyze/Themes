@@ -14,7 +14,7 @@
 			"banner": {
 				"name": "Banner",
 				"type": "text/image_url",
-				"replacements": [["--banner: url(https://i.imgur.com/VoPJz2S.jpg);", "}body{--banner:{{{insert}}};}:root{"]],
+				"replacements": [["--banner: url(https://i.imgur.com/VoPJz2S.jpg);", "--banner:{{{insert}}};"]],
 				"default": "https://i.imgur.com/VoPJz2S.jpg"
 			},
 			"background": {
