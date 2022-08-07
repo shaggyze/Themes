@@ -41,8 +41,9 @@
 					},
 					"transition": {
 					"name": "Transition",
-					"css": {"bottom": "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css"}
-					
+					"type": "text",
+					"replacements": [["\"https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css\"", "\"{{{insert}}}\""]],
+					"default": "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css"
 					}
 				}
 			}
