@@ -7,9 +7,6 @@
 		"type": "modern",
 		"help": "https://myanimelist.net/forum/?topicid=1723114",
 		"flags": ["alpha"],
-		"preview": {
-			"cover": false
-		},
 		"options": {
 			"banner": {
 				"name": "Banner",
@@ -20,7 +17,7 @@
 			"background": {
 				"name": "Background",
 				"type": "text/image_url",
-				"replacements": [["--background: none;", "--background:{{{insert}}};"]],
+				"replacements": [["--background: url(https://cdn.myanimelist.net/s/common/uploaded_files/1659714746-a2fb60628a7f1aaff30fb6151f3e54a0.jpeg);", "--background:{{{insert}}};"]],
 				"default": "https://cdn.myanimelist.net/s/common/uploaded_files/1659714746-a2fb60628a7f1aaff30fb6151f3e54a0.jpeg"
 			}
 		},
