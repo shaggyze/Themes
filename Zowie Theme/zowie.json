@@ -7,13 +7,10 @@
 		"type": "modern",
 		"help": "https://myanimelist.net/forum/?topicid=1723114",
 		"flags": ["alpha"],
+		"preview": {
+			"cover": false
+		},
 		"options": {
-			"banner": {
-				"name": "Banner",
-				"type": "text/image_url",
-				"replacements": [["--banner: url(https://i.imgur.com/VoPJz2S.jpg);", "--banner:{{{insert}}};"]],
-				"default": "https://i.imgur.com/VoPJz2S.jpg"
-			},
 			"background": {
 				"name": "Background",
 				"type": "text/image_url",
