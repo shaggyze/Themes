@@ -134,7 +134,7 @@ a:hover {
      top: 0px !important;
      left: 792px !important;
 }
- .status-menu-container .search-container #search-box input {
+.status-menu-container .search-container #search-box input {
      position: fixed !important;
      top: 10px !important;
      left: 613px !important;
@@ -146,7 +146,7 @@ a:hover {
     position: fixed;
     display: block;
 	left: 245px;
-    top: 0px;
+    top: 5px;
     height: 50px;
     width: 355px;
 	border: 0px;
@@ -219,7 +219,7 @@ a:hover {
 .header .header-menu .btn-menu  {
     position: fixed;
     left: 0px;
-    top: 0px;
+    top: 5px;
 }
 /* Cover Block */
 .cover-block {
