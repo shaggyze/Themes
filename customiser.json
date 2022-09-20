@@ -1,6 +1,14 @@
 {
 	"json_version": 0.3,
 	"themes": {
+		{
+			"name": "Example",
+			"author": "Your Name Here",
+			"type": "modern",
+			"url": "json/theme_example.json"
+			"tags": {"layout": ["table"], "other": ["highly customisable", "beginner-friendly"]},
+			"date": "2022-08-06"
+		},
 		"zowie": {
 			"name": "Zowie",
 			"author": "ShaggyZE",
