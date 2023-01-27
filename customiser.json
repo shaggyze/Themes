@@ -2,14 +2,6 @@
 	"json_version": 0.3,
 	"themes": [
 		{
-			"name": "Example",
-			"author": "Your Name Here",
-			"type": "modern",
-			"url": "json/theme_example.json",
-			"tags": {"layout": ["table"], "other": ["highly customisable", "beginner-friendly"]},
-			"date": "2022-08-06"
-		},
-		{
 			"name": "Zowie",
 			"author": "ShaggyZE",
 			"image": "https://dl.dropboxusercontent.com/s/5hw3dh4v0c2k8aw/Zowie-Preview-240x135.jpg",

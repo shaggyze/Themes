@@ -539,6 +539,120 @@ body > div:nth-child(21) > div {
     visibility: hidden;
 }
 
+/* Unsorted
+
+
+body {
+    /*background-image: url(https://dl.dropboxusercontent.com/s/w5oq8gol1lx7wvg/FuturisticGamingRoomWallpaper_LQ.png) !important;*/
+    /*background-image: url(https://dl.dropboxusercontent.com/s/xpfvei3uqowwgp8/FuturisticGamingRoomWallpaper.png) !important;*/
+    /*background-image: url(https://dl.dropboxusercontent.com/s/wn4ewdkqsotsyqd/FuturisticGamingRoomWallpaper_LQ.gif) !important;*/
+    background-image: url(https://dl.dropboxusercontent.com/s/3ytd4t0un6kf48r/FuturisticGamingRoomWallpaper_MQ.gif) !important;
+    /*background-image: url(https://dl.dropboxusercontent.com/s/daejovytmjwmyz5/FuturisticGamingRoomWallpaper_HQ.gif) !important;*/
+}
+.list-container {
+    background-clip: padding-box;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 15px 15px 15px;
+    -o-border-image: url("https://dl.dropboxusercontent.com/s/82zjorzvts5p17w/Plasma_Circle_3.gif") 90 90 90 stretch !important;
+    border-image: url("https://dl.dropboxusercontent.com/s/82zjorzvts5p17w/Plasma_Circle_3.gif") 90 90 90 stretch !important;
+    z-index: 1 !important;
+}
+
+.list-table .list-table-data .data.image .image {
+    width: 30px !important;
+    height: 30px !important;
+    background-size: cover;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 15px 15px 15px;
+    border-radius: 180px;
+    background-image: none;
+    display: inline-block !important;
+
+}
+/* List Hover Circle */
+.list-table .list-table-data:hover .data.image .image{
+    background-image: url("https://i.pinimg.com/originals/19/f3/ce/19f3ceec023102e0e4b7c579b219ff52.gif") !important;
+    animation: 45s linear infinite spinning;
+}
+a:not(.link) {
+    transform: skew(10deg, 10deg);
+
+}
+
+.list-menu-float .icon-menu {
+	background-color: transparent !important;
+    background-size: cover;
+    background-image: url(https://dl.dropboxusercontent.com/s/iibzuo2er8bdxy2/output-onlinegiftools%20%282%29.gif);
+    /*background-image: url(https://dl.dropboxusercontent.com/s/4o45ct3sobt5x7v/2022-08-12_22-39-08.png);*/
+	border-radius: 4px;
+}
+.list-menu-float .icon-menu svg.icon {
+	padding-left: 2px !important;
+}
+.list-menu-float .icon-menu.logout svg.icon-logout {
+    padding-left: 4px !important;
+    padding-top: 2px !important;
+}
+.header .header-menu .list-menu .icon-menu {
+    position: fixed;
+	left: 0px;
+    color: white;
+    background-color: transparent;
+    transform: skew(0deg, 0deg);
+    
+}
+.header .header-menu .list-menu .icon-menu:hover {
+    background-color: transparent;
+}
+.header .header-menu .list-menu .icon-menu svg.icon {
+    fill: white;
+}
+.header .header-menu .list-menu .icon-menu:hover svg.icon {
+    fill: black;
+}
+.cover-block {
+	position: fixed;
+	top: 90px;
+	left: 0px;
+	width: 48% !important;
+    min-width: 48% !important;
+    height: 280px !important;
+	/*background: var(--cover-bg) var(--banner) no-repeat center center / cover scroll;*/
+    background-repeat: no-repeat;
+    background-size: contain !important;
+	z-index: -1 !important;
+}
+
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+body.ownlist.anime .list-table .list-table-data .data.title {
+    position: relative;
+    width: 180px;
+    height: 25px;
+    order: 12;
+    line-height: 16px;
+    flex: 1 0 auto;
+    padding: 32px 0px 0px 8px !important;
+}
+/* Expand title on Hover*/
+.data.title a.link.sort:hover {
+    overflow: auto !important;
+    text-overflow: initial;
+}
+
+
+
+
+
 
 /* Music Videos
 /*https://dl.dropboxusercontent.com/s/id7yrz877c18k1h/coming-soon.jpg*/
