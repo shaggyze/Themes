@@ -1,5 +1,5 @@
 {
-	"json_version": 0.2,
+	"json_version": 0.3,
 	"data": {
 		"name": "Zowie",
 		"author": "ShaggyZE",
@@ -7,8 +7,37 @@
 		"type": "modern",
 		"help": "https://myanimelist.net/forum/?topicid=1723114",
 		"flags": ["alpha"],
+		"sponsor": "https://ko-fi.com/valeriolyndon",
+		"columns": {
+			"mode": "greylist",
+			"animelist": {
+				"Notes": false
+			},
+			"mangalist": {
+				"Notes": false
+			}
+		},
 		"preview": {
-			"cover": false
+			"cover": false,
+			"columns": {
+				"mode": "blacklist",
+				"animelist": {
+					"Studios": null,
+					"Aired Dates": null,
+					"Rating": null,
+					"Licensors": false,
+					"Storage": false,
+					"Genre": false,
+					"Demographics": false
+				},
+				"mangalist": {
+					"Magazine": null,
+					"Published Dates": null,
+					"Retail Manga": false,
+					"Genres": false,
+					"Demographics": false
+				}
+			}
 		},
 		"options": {
 			"background": {
