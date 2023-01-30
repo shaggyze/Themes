@@ -8,15 +8,6 @@
 		"help": "https://myanimelist.net/forum/?topicid=1723114",
 		"flags": ["alpha"],
 		"sponsor": "https://ko-fi.com/valeriolyndon",
-		"columns": {
-			"mode": "greylist",
-			"animelist": {
-				"Notes": false
-			},
-			"mangalist": {
-				"Notes": false
-			}
-		},
 		"preview": {
 			"cover": false,
 			"columns": {
