@@ -1,12 +1,12 @@
 /*==============================*\
 | "Zowie" by ShaggyZE            |
-| R0.4                           |
+| R0.5                           |
 | == = == THEME CONTENTS == = == |
 
 
 /*@\import "https://dl.dropboxusercontent.com/s/42j6pz0965kuq4a/malimages.css";*/
 @\import "https://malscraper.azurewebsites.net/covers/anime/ShaggyZE/presets/dataimagelinkbefore";
-@\import "https://malscraper.azurewebsites.net/covers/manga/ShaggyZE/presets/dataimagelinkbefore";
+/*@\import "https://malscraper.azurewebsites.net/covers/manga/ShaggyZE/presets/dataimagelinkbefore";*/
 
 @\import "https://dl.dropboxusercontent.com/s/8m53aw8fsenb98u/maltags3.css";
 @\import "https://dl.dropboxusercontent.com/s/896gv41033tisvo/Mini-Review%20ShaggyZE.css";
@@ -15,33 +15,38 @@
 @\import "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css";
 :root {
 	--bg: #1C1C1C;
-    --text: #FFFFFF;
-	--link: #FFFFFF;
-	--link-hover: #333333;
-	--header-text: #FFFFFF;
-	--header-table-bg: #F6F6F6;
-	--header-table-text: #000000;
+    --text: #FFC0CB;
+	--link: #FFC0CB;
+	--link-hover: #E03FD8;
+	--header-text: #FFC0CB;
+	--header-table-bg: #800080;
+	--header-table-text: #FFC0CB;
+	--header-table-text-hover: #E03FD8;
+	--table-number-bg: #800080;
+	--table-number-text: #FFC0CB;
 	--warn-text: #FF0000;
-	--icons: #FFFFFF;
-	--icons-hover: #333333;
-	--status-button-on: #787878;
-	--scrollbar: var(--text);
-	--scrollbar-hover: var(--status-button-on);
-	--scrollbar-border: var(--header-table-bg);
-	--scrollbar-shadow: var(--header-table-bg);
+	--icons: #BA55D3;
+	--icons-hover: #8A2BE2;
+	--status-button-on: #E03FD8;
+	--status-button-hov: #8A2BE2;
+	--scrollbar: #BA55D3;
+	--scrollbar-hover: #8A2BE2;
+	--scrollbar-border: #800080;
+	--scrollbar-shadow: #800080;
 
 	--cover-bg: transparent;
 	/*--banner: url(https://i.imgur.com/VoPJz2S.jpg);*/
-	--background: url(https://cdn.myanimelist.net/s/common/uploaded_files/1659714746-a2fb60628a7f1aaff30fb6151f3e54a0.jpeg);
+
+	--background: url(https://shaggyze.website/Themes/Zowie/FuturisticGamingRoomWallpaper_MQ.gif);
 }
 /* Body */
 body {
-	background-image: var(--background);
+	background-image: var(--background) !important;
 	background-color: var(--bg);
-	background-repeat: no-repeat;
+	background-repeat: no-repeat !important;
 	background-attachment: fixed;
-	background-position: center center;
-	background-size: cover;
+	background-position: center center !important;
+	background-size: cover !important;
 }
 /* Scrollbar */
 body {
@@ -106,47 +111,67 @@ a:hover {
 }
 .header .header-info, #mal_cs_otherlinks {
     position: fixed;
-    top: 55px;
+    top: 85px;
     left: 245px;
 }
 /* Status Menu */
 .status-menu-container {
     height: 0px ;
 }
+#status-menu {
+		width: 100%;
+}
 #status-menu > div {
     display: block !important;
     margin-top: -135px;
     position: fixed;
+	width: 50%;
 }
 .status-menu-container .status-menu .status-button {
     color: var(--link);
+	width: 17%;
 }
-.status-button.on {
+.status-menu-container .status-menu .status-button.on {
     color: var(--status-button-on);
 }
 .status-menu-container .status-menu .status-button:hover {
-    color: var(--link-hover);
+    color: var(--status-button-hov);
 }
 /* Search */
 .status-menu-container .search-container #search-button{
-     font-size: 15px;
-     position: fixed !important;
-     top: 0px !important;
-     left: 792px !important;
+    font-size: 15px;
+    position: fixed !important;
+    top: 0px !important;
+    left: 46% !important;
 }
 .status-menu-container .search-container #search-box input {
-     position: fixed !important;
-     top: 10px !important;
-     left: 613px !important;
-     width: 200px;
-	 height: 25px;
+    position: fixed !important;
+    top: 8px !important;
+    left: 37% !important;
+    width: 10%;
+	height: 24px;
+    color: #FFC0CB;
+    background-color: #1C1C1C;
+    border-color: #8A2BE2;
+}
+/* btn Menu */
+.header .header-menu .btn-menu  {
+    position: fixed;
+    left: 0px;
+    top: 10px;
+	width: 20%;
+	text-align: left;
+	word-wrap: word-break !important;
+}
+.header .header-menu .list-menu .icon-menu {
+	
 }
 /* List Menu */
 .list-menu-float {
     position: fixed;
     display: block;
 	left: 245px;
-    top: 5px;
+    top: 35px;
     height: 50px;
     width: 355px;
 	border: 0px;
@@ -173,32 +198,32 @@ a:hover {
 }
 .list-menu-float .icon-menu.quick-add {
     position: fixed;
-    top: 0;
+    top: 35px;
     left: 300px;
 }
 .list-menu-float .icon-menu.anime-list {
     position: fixed;
-    top: 0;
+    top: 35px;
     left: 350px;
 }
 .list-menu-float .icon-menu.manga-list {
     position: fixed;
-    top: 0;
+    top: 35px;
     left: 400px;
 }
 .list-menu-float .icon-menu.history {
     position: fixed;
-    top: 0;
+    top: 35px;
     left: 450px;
 }
 .list-menu-float .icon-menu.export {
     position: fixed;
-    top: 0;
+    top: 35px;
     left: 500px;
 }
 .list-menu-float .icon-menu.logout {
     position: fixed;
-    top: 0;
+    top: 35px;
     left: 550px;
 }
 .list-menu-float .icon-menu .text, .list-menu-float .icon-menu:not(.profile):hover {
@@ -214,13 +239,6 @@ a:hover {
 .list-menu-float .icon-menu.setting:hover .text .link-list-setting, .list-menu-float .icon-menu.setting:hover .text .link-style-setting {
     background-color: transparent;
 }
-
-/* btn Menu */
-.header .header-menu .btn-menu  {
-    position: fixed;
-    left: 0px;
-    top: 5px;
-}
 /* Cover Block */
 .cover-block {
 	position: fixed;
@@ -232,7 +250,7 @@ a:hover {
 	/*background: var(--cover-bg) var(--banner) no-repeat center center / cover scroll;*/
     background-repeat: no-repeat;
     background-size: contain !important;
-	z-index: 0 !important;
+	display: none;
 }
 .cover-block .image-container {
 	position: fixed;
@@ -259,7 +277,7 @@ a:hover {
     right: 0px;
     position: absolute;
 }
-.list-stats { position: fixed; display: block !important; left: 50%; width: 50% !important; top: 57.5px !important; bottom: auto !important; color: var(--text); background-color: rgba(0,0,0,.5) !important; border-radius: 16px; }
+.list-stats { position: fixed; display: block !important; left: 50%; width: 50% !important; top: 67px !important; bottom: auto !important; color: var(--text); background-color: rgba(0,0,0,.5) !important; border-radius: 16px; }
 .stats a:first-of-type { display: none !important; }
 
 /* List Table Header */
@@ -275,13 +293,19 @@ a:hover {
     top: -1vh;
 	z-index: 1;
 }
+.list-table .list-table-header .header-title:not(.status,.number,.image) {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.list-table .list-table-header .header-title .link.sort:hover {
+    color: var(--header-table-text-hover);
+}
 .sort-icon {
     color: var(--header-table-text) !important;
     font-size: 14px !important;
 }
-.list-table .list-table-header .header-title .link.sort:hover {
-    color: #333333;
-}
+
 /* List Container */
 .list-container {
     margin-top: 120px;
@@ -316,11 +340,13 @@ a:hover {
     position: sticky;
     left: 0vh;
     margin-top: 50%;
-    width: 15px !important;
+    width: 100% !important;
     height: 15px !important;
     border: 0px !important;
-    background-color: black;
-    border-radius: 180px;
+	color: var(--table-number-text);
+    background-color: var(--bg);
+	border-radius: 180px;
+	box-shadow: 0 2px 5px var(--table-number-bg);
     display: inline-block !important;
 }
 .list-table .list-table-data .data.title {
@@ -329,6 +355,7 @@ a:hover {
     word-wrap: normal !important;
 	min-width: 400px !important;
 }
+
 .list-table .list-table-data .data.title .link {
     font-size: 1.3em;
 }
@@ -372,11 +399,19 @@ a:hover {
   overflow: hidden;
 }
 /* Tags Edit*/
+.list-table .list-table-header .header-title.tags {
+    max-width: 40px !important;
+}
+
 a.edit {
   display: none !important;
 }
 .list-table .list-table-data .data.score .link {
+    color: var(--link) !important;
     font-size: 1.5em;
+}
+.fa-solid {
+    font-size: 16.5px !important;
 }
 .list-table .list-table-data .tags .edit:after {
   display: none;
@@ -389,11 +424,14 @@ a.edit {
     color: var(--text) !important;
 }
 td {
-    color: #FFFFFF;
+    color: var(--text) !important;
 }
 /* Remove PV Icons */
 .malicon{display:none !important;}
 
+.list-unit .loading-space {
+    color: var(--text);
+}
 
 /*-S-T-A-R-T--------------------*\
 | Large Full-Res Cover Hover R0.1|
@@ -495,17 +533,13 @@ div#footer-block {
 }
 #copyright {
   color: var(--text);
+  width: 105% !important;
 }
 
 
 /*-S-T-A-R-T--------------------*\
 | Mini-Review R0.1               |
 \*------------------------------*/
-@media all and (orientation: landscape) {
-	.list-table .list-table-data:hover .data.title .link:before {
-		bottom: %50;
-	}
-}
 
 .list-table .list-table-data:hover .data.title .link:before {
 	display: block !important;
@@ -513,18 +547,18 @@ div#footer-block {
 	background-size: contain;
 	background-repeat: no-repeat;
   position: fixed;
-  color: black;
+  color: var(--text);
 	text-shadow: none !important;
   left: 20% !important;
-	width: 400px;
+	width: 25%;
   bottom: 30px;
 
   font-family: arial !important;
 	font-size: 12px;
-	border: white 2px solid;
+	border: var(--header-table-bg) 2px solid;
 	border-radius: 30px;
 	padding: 1%;
-	background-color: white;
+	background-color: var(--bg);
 	z-index:10001 !important;
 	  
 	overflow: hidden !important;
@@ -539,14 +573,16 @@ body > div:nth-child(21) > div {
     visibility: hidden;
 }
 
-/* Unsorted
+
+/* Unsorted */
+
 
 
 body {
     /*background-image: url(https://dl.dropboxusercontent.com/s/w5oq8gol1lx7wvg/FuturisticGamingRoomWallpaper_LQ.png) !important;*/
     /*background-image: url(https://dl.dropboxusercontent.com/s/xpfvei3uqowwgp8/FuturisticGamingRoomWallpaper.png) !important;*/
     /*background-image: url(https://dl.dropboxusercontent.com/s/wn4ewdkqsotsyqd/FuturisticGamingRoomWallpaper_LQ.gif) !important;*/
-    background-image: url(https://dl.dropboxusercontent.com/s/3ytd4t0un6kf48r/FuturisticGamingRoomWallpaper_MQ.gif) !important;
+	/*background-image: url(https://dl.dropboxusercontent.com/s/3ytd4t0un6kf48r/FuturisticGamingRoomWallpaper_MQ.gif) !important;*/
     /*background-image: url(https://dl.dropboxusercontent.com/s/daejovytmjwmyz5/FuturisticGamingRoomWallpaper_HQ.gif) !important;*/
 }
 .list-container {
@@ -554,8 +590,8 @@ body {
     border-color: transparent;
     border-style: solid;
     border-width: 15px 15px 15px;
-    -o-border-image: url("https://dl.dropboxusercontent.com/s/82zjorzvts5p17w/Plasma_Circle_3.gif") 90 90 90 stretch !important;
-    border-image: url("https://dl.dropboxusercontent.com/s/82zjorzvts5p17w/Plasma_Circle_3.gif") 90 90 90 stretch !important;
+    -o-border-image: url("https://shaggyze.website/Themes/Zowie/Plasma_Circle_3.gif") 90 90 90 stretch !important;
+    border-image: url("https://shaggyze.website/Themes/Zowie/Plasma_Circle_3.gif") 90 90 90 stretch !important;
     z-index: 1 !important;
 }
 
@@ -636,7 +672,6 @@ a:not(.link,.btn-apply,.btn-clear) {
 }
 body.ownlist.anime .list-table .list-table-data .data.title {
     position: relative;
-    width: 180px;
     height: 25px;
     order: 12;
     line-height: 16px;
@@ -923,6 +958,40 @@ opacity: 1 !important;
 pointer-events: visible !important;
 }
 .list-table #more-317.more-info {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: transparent;
+height: 300px !important;
+width: 400px !important;
+top: 75px !important;
+left: 20% !important;
+opacity: 1 !important;
+position: fixed;
+font-size: 15px;
+z-index: 10000;
+content: "";
+}
+/* Dr. Stone MUSIC PLAYER */
+[data-query*='"tag":"Isekai"'] .link[href^="/anime/40852/"] ~ .add-edit-more .more a {  
+display: block !important;
+
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+background-image: url(https://dl.dropboxusercontent.com/s/zvtar3s64fc9wcp/drstone.gif) !important;
+content: "";
+z-index: 2 !important;
+position: fixed !important;
+color: transparent !important;
+height: 180px !important;
+width: 215px !important;
+right: calc(100% - 245px);
+top: 20px !important;
+opacity: 1 !important;
+pointer-events: visible !important;
+}
+.list-table #more-40852.more-info {
 background-position: center center;
 background-repeat: no-repeat;
 background-size: contain;
@@ -1246,7 +1315,7 @@ font-size: 15px;
 z-index: 10000;
 content: "";
 }
-/*Nausicaä of the Valley of the Wind MUSIC PLAYER*/
+/*NausicaÃ¤ of the Valley of the Wind MUSIC PLAYER*/
 [data-query*='"tag":"Studio Ghibli"'] .link[href^="/anime/572/"] ~ .add-edit-more .more a {  
 display: block !important;
 
@@ -1509,7 +1578,7 @@ display: block !important;
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center center;
-background-image: url(https://dl.dropboxusercontent.com/s/tgryix3li20m5tv/vivy.gif) !important;
+background-image: url(https://shaggyze.website/Themes/Images/vivy.gif) !important;
 content: "";
 z-index: 0 !important;
 position: fixed !important;
@@ -1542,7 +1611,7 @@ display: block !important;
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center center;
-background-image: url(https://dl.dropboxusercontent.com/s/tgryix3li20m5tv/vivy.gif) !important;
+background-image: url(https://shaggyze.website/Themes/Images/vivy.gif) !important;
 content: "";
 z-index: 0 !important;
 position: fixed !important;
