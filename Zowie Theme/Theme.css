@@ -576,9 +576,9 @@ body {
     background-image: url("https://i.pinimg.com/originals/19/f3/ce/19f3ceec023102e0e4b7c579b219ff52.gif") !important;
     animation: 45s linear infinite spinning;
 }
-a:not(.link) {
-    transform: skew(10deg, 10deg);
 
+a:not(.link,.btn-apply,.btn-clear) {
+    transform: skew(10deg, 10deg);
 }
 
 .list-menu-float .icon-menu {
