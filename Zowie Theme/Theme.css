@@ -14,7 +14,7 @@
 @\import "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis.css";
 @\import "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css";
 :root {
-	--bg: #1C1C1C;
+	--bg: #000000;
     --text: #FFC0CB;
 	--link: #FFC0CB;
 	--link-hover: #E03FD8;
