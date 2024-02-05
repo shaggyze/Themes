@@ -43,7 +43,7 @@
 /* Body */
 body {
 	background-image: var(--background) !important;
-	background-color: var(--bg);
+	background-color: var(--bg) !important;
 	background-repeat: no-repeat !important;
 	background-attachment: fixed;
 	background-position: center center !important;
