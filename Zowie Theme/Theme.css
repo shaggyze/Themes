@@ -37,12 +37,13 @@
 	--cover-bg: transparent;
 	/*--banner: url(https://i.imgur.com/VoPJz2S.jpg);*/
 
-	--background: url(https://shaggyze.website/Themes/Zowie/FuturisticGamingRoomWallpaper_MQ.gif);
+	/*--background: url(https://shaggyze.website/Themes/Zowie/FuturisticGamingRoomWallpaper_MQ.gif);*/
+	--background: url(https://i.ytimg.com/vi/PiQuUteFDLU/maxresdefault.jpg);
 }
 /* Body */
 body {
-	background-image: var(--background);
-	background-color: var(--bg) !important;
+	background-image: var(--background) !important;
+	background-color: var(--bg);
 	background-repeat: no-repeat !important;
 	background-attachment: fixed;
 	background-position: center center !important;
