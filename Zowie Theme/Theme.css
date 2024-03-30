@@ -37,8 +37,8 @@
 	--cover-bg: transparent;
 	/*--banner: url(https://i.imgur.com/VoPJz2S.jpg);*/
 
-	/*--background: url(https://shaggyze.website/Themes/Zowie/FuturisticGamingRoomWallpaper_MQ.gif);*/
-	--background: url(https://i.ytimg.com/vi/PiQuUteFDLU/maxresdefault.jpg);
+	--background: url(https://shaggyze.website/Themes/Zowie/FuturisticGamingRoomWallpaper_MQ.gif);
+	/*--background: url(https://i.ytimg.com/vi/PiQuUteFDLU/maxresdefault.jpg);*/
 }
 /* Body */
 body {
@@ -583,7 +583,7 @@ body {
     /*background-image: url(https://dl.dropboxusercontent.com/s/w5oq8gol1lx7wvg/FuturisticGamingRoomWallpaper_LQ.png) !important;*/
     /*background-image: url(https://dl.dropboxusercontent.com/s/xpfvei3uqowwgp8/FuturisticGamingRoomWallpaper.png) !important;*/
     /*background-image: url(https://dl.dropboxusercontent.com/s/wn4ewdkqsotsyqd/FuturisticGamingRoomWallpaper_LQ.gif) !important;*/
-	/*background-image: url(https://dl.dropboxusercontent.com/s/3ytd4t0un6kf48r/FuturisticGamingRoomWallpaper_MQ.gif) !important;*/
+	background-image: url(https://dl.dropboxusercontent.com/s/3ytd4t0un6kf48r/FuturisticGamingRoomWallpaper_MQ.gif) !important;
     /*background-image: url(https://dl.dropboxusercontent.com/s/daejovytmjwmyz5/FuturisticGamingRoomWallpaper_HQ.gif) !important;*/
 }
 .list-container {
@@ -591,8 +591,8 @@ body {
     border-color: transparent;
     border-style: solid;
     border-width: 15px 15px 15px;
-    -o-border-image: url("https://shaggyze.website/Themes/Zowie/Plasma_Circle_3.gif") 90 90 90 stretch !important;
-    border-image: url("https://shaggyze.website/Themes/Zowie/Plasma_Circle_3.gif") 90 90 90 stretch !important;
+    -o-border-image: url("http://shaggyze.website/Themes/Zowie/Plasma_Circle_3.gif") 90 90 90 stretch !important;
+    border-image: url("http://shaggyze.website/Themes/Zowie/Plasma_Circle_3.gif") 90 90 90 stretch !important;
     z-index: 1 !important;
 }
 
