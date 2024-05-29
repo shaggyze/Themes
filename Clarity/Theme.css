@@ -1,0 +1,889 @@
+/* - - - - - - - - - - - - - - -*\
+  Full animelist design v6 - Mar 2021 by
+  https://myanimelist.net/profile/SheyCroix
+  https://myanimelist.net/forum/?topicid=1723114
+\*- - - - - - - - - - - - - - - */
+/**  IMPORTS  **/
+
+/*@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Theme.css";*/
+
+@\import "https://dl.dropboxusercontent.com/s/v6ixr1nhnf6vjkl/Theme.css";
+
+@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Mod%20-%20Dark%20Mode%20Compressed.css";
+
+@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Mod%20-%20Hover%20Image%20Compressed.css";
+
+@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Mod%20-%20Category-Coloured%20Header%20Text%20Compressed.css";
+
+@\import "https://shaggyze.github.io/Themes/Mod%20-%20Mini-Review.css";
+
+@\import "https://shaggyze.github.io/Themes/Mod%20-%20Horizontal%20Tags%2C%20Demographic%20%26%20Genres.css";
+
+@\import "https://shaggyze.website/Themes/RandomSNES/";
+
+/* Hide Hentai */
+/* @\import "https://shaggyze.github.io/Themes/Mod%20-%20Hide%20Hentai.css"; */
+/* Optional Show Owner Hentai */
+/* @\import "https://shaggyze.github.io/Themes/Mod%20-%20Show%20Hentai.css"; */
+
+/* ===================== */
+
+body { 
+	/* Profile Picture */
+	--avatar: url(https://cdn.myanimelist.net/images/useravatars/335133.gif?t=1633696200) !important;
+	/* Cover Banner */
+	--banner: none;
+	/* Character Image */
+	/*--character: url(https://dl.dropboxusercontent.com/s/sz09hf6ff66f7dh/pngfind.com-re-zero-png-6738985.png) !important;*/
+	--character: none;
+	/* Background */
+	--background: none; 
+
+	background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover !important; 
+}
+
+/* Cursor */
+body {
+	cursor: default !important;
+}
+a:hover {
+	cursor: pointer !important;
+}
+a.img:hover {
+	cursor: pointer !important;
+}
+/*-S-T-A-R-T--------------------*\
+| Change Banner Height           |
+\*------------------------------*/
+/*Change number here*/
+:root { --banner-height: 500px; }
+
+.cover-block { height: var(--banner-height); }
+.header { margin-top: calc(var(--banner-height) - 36px); }
+.list-stats { top: calc(var(--banner-height) + 98px); }
+/*------------------------E-N-D-*/
+
+/*-S-T-A-R-T--------------------*\
+| Background Tint                |
+\*------------------------------*/
+body::before {
+	/* change colour here 
+	0, 0, 0, 0.04
+	228, 166, 103, 0.14*/
+	background: rgba(0, 0, 0, 0.2);
+	content: "";
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+} /*------------------------E-N-D-*/
+
+
+/* ====================
+Dark Mode Filter Fix */
+body[data-owner="1"] #fancybox-frame { filter: none; }
+
+/*-S-T-A-R-T - - - - - - - - - - -*\
+  Variables Dark Mode
+\*- - - - - - - - - - - - - - - */
+:root {
+    /* Generic Colours */
+    /*Page background  --pbg*/
+    /*Content background (list entries, header, footer, header buttons, popups)  --bg*/
+    /*Mostly used for borders (search bar, user inputs)  --bg-dark*/
+    /*===Generic text colour, applies to almost all text on the list. 
+		#ababab CCEEED===*/
+    --text: #45b3e7;
+    /*Generic text on hover #416abe*/
+    --text-h: #ff80aa;
+    /*Lighter text (add/edit/more, type, column descriptors, start/end/days, etc). Also serves as border colour for filter menu #777*/
+    --text-dim: #999999;
+    /*Lighter text on hover #999*/
+    --text-dim-h: #ee9f77;
+    /*Used for longer text chunks (filter menu, more info) #ababab*/
+    --text-dark: #b3fc86;
+
+    /*Used for larger features to blend with text (filter menu).  --icon*/
+    /*Used for occasional colour flares (header all anime button, entry names, discuss link). #416abe*/
+    --accent: #ebc314;
+
+    /*====== Button Colours */
+    /*Used for occasional colour flares (header all anime button, entry names, discuss link).  --btn-bg*/
+    /*Background for secondary content on hover. Also serves as a secondary colour for header buttons. #ababab*/
+    --btn-bg-h: #476b6b;
+    /*Background for header buttons on hover, also settings bar  #416abe*/
+    --btn-head-bg-h: #5c5c8a;
+    /*Text colour for secondary content and header buttons on hover  #212121*/
+    --btn-text-h: #2d1206;
+
+    /*===== Header Colours */
+    /*Text colour for header category buttons and search icon. Also serves as footer text color  --text-head*/
+    /*Text color for active header category button  --text-head-h*/
+    /*====== Single-Use Colours */
+    /*The colour that is seen if the cover banner lacks an image.  --cover-bg*/
+    /*Edit button for tags, seen on the right of each list entry #323232*/
+    --edit-btn: #ec8713;
+    /*The checkmark on completed list entries  #416abe*/
+    --checkmark: #45b3e7;
+}
+/*------------------------E-N-D-*/
+
+/*-S-T-A-R-T--------------------*\
+  LIST Container - Cover Block
+\*------------------------------*/
+.cover-block {
+    margin: 0 auto;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 18px;
+    color: white;
+    padding-bottom: -40px;
+    font-weight: bold !important;
+    font-family: sans-serif, cursive;
+    font-variant: small-caps;
+}
+.cover-block::before {
+    text-align: left !important;
+    content: "Click on the GIF to watch a video.";
+    background-color: rgba(0,0,0,.3);
+    padding-bottom: 20px;
+}
+/*------------------------E-N-D-*/
+
+/*------------------------------*\
+  TITLES
+\*------------------------------*/
+/* link color 56E0BD */
+.list-table .list-table-data .title .link {
+	color: var(--text) !important; }
+/* Titles on Hover */
+.list-table .list-table-data .title .link:hover {
+	color: var(--text-h) !important; }
+/* ===== item row title hover colour */
+.list-table-data:hover .title .link {
+	color: #39ac73 !important; }
+
+/* Change width of status bar
+color of anime status at the left */
+.list-item {
+	border-radius: 20px;
+}
+.list-table-data { padding-left: 1px; }
+/*------------------------E-N-D-*/
+
+
+
+/*-S-T-A-R-T--------------------*\
+| List Rows Internals            |
+\*------------------------------*/
+
+/*==============================*\
+| CURVED ROWS                    |
+\*------------------------------*/
+#list-container .data.status {
+	/* increase width so that the rounding effect will work */
+	width: 18px !important;
+	/* remove background and replace it with a left-border so that it visually remains the same as before despite us increasing the width */
+	background: none !important;
+	border-left: 2px solid var(--accent) !important;
+	/* round edges using border-radius */
+	border-radius: 20px 0 0 20px;
+	/* turn off mouse interaction to avoid any potential issues increasing the width might cause */
+	pointer-events: none;
+}
+.data.tags a.edit {
+	/* increase width so that the rounding effect will work */
+	width: 9px !important;
+	/* replace it with a left-border so that it visually remains the same as before despite us increasing the width */
+	border-right: 2px solid var(--edit-btn) !important;
+	/* round edges using border-radius */
+	border-radius: 0 10px 10px 0;
+}
+
+/*======================
+_Rows Colour          */
+#list-container .data.status.watching,
+#list-container .data.status.reading {
+	border-color: var(--watching) !important;
+}
+#list-container .data.status.completed {
+	border-color: var(--completed) !important;
+}
+#list-container .data.status.onhold {
+	border-color: var(--onhold) !important;
+}
+#list-container .data.status.dropped {
+	border-color: var(--dropped) !important;
+}
+#list-container .data.status.plantowatch,
+#list-container .data.status.plantoread {
+	border-color: var(--plantowatch) !important;
+}
+
+/*======================
+_Rows Colour          */
+:root {
+	 /*Change colour here */
+	--row-tint: rgba(1,1,1, 0.6);
+	--row-tint-h: var(--cat-col), 0.6;}
+
+.list-item, .data.priority, .data.number, .data.status:before, .data.status:after {
+	background: linear-gradient(var(--row-tint),var(--row-tint)), var(--background) no-repeat center / cover fixed black !important;
+
+}
+
+/*========================
+_List Row Hover(CatCol) */
+
+[data-query*='status":7']{--row-tint-h:var(--allanime), 0.6 !important;}
+[data-query*='status":1']{--row-tint-h:var(--watching), 0.6 !important;}[data-query*='status":2']{--row-tint-h:var(--completed), 0.6;}[data-query*='status":3']{--row-tint-h:var(--onhold), 0.6;}[data-query*='status":4']{--row-tint-h:var(--dropped), 0.6;}[data-query*='status":6']{--row-tint-h:var(--plantowatch), 0.6;}
+
+.list-item:hover, .data.status:hover,.list-table .list-table-data:hover .data.number,
+.list-table .list-table-data:hover a, 
+.list-table .list-table-data:hover {
+  --row-tint: var(--row-tint-h) !important;
+}
+
+tr.list-table-data:hover {
+background-color:var(--bg) !important;
+}
+/*------------------------E-N-D-*/
+
+/*-S-T-A-R-T--------------------*\
+| Extended Info R0.1             |
+\*------------------------------*/
+..data.progress div , .data.chapter div {
+    position: relative
+}
+.data.progress div:after {
+    position: absolute;
+    left: calc(50% - 17px);
+    top: calc(50% - 37px);
+    font: 14px Inconsolata, monospace;
+    color: #b3fc86;
+    transform: translateX(-50%);
+	background-color: transparent;
+    /*background-color: #000;
+    border-radius: 10%;
+    border: 5px solid #000;*/
+    margin: 0 0 0 auto;
+    width: 320px
+}
+.data.chapter div:after {
+    position: absolute;
+    left: calc(50% - 17px);
+    top: calc(50% - 37px);
+    font: 14px Inconsolata, monospace;
+    color: #b3fc86;
+    transform: translateX(-50%);
+	background-color: transparent;
+    /*background-color: #000;
+    border-radius: 10%;
+    border: 5px solid #000;*/
+    margin: 0 0 0 auto;
+    width: 320px
+}
+.data.storage, .data.retail {
+    width: 0;
+    font-size: 0;
+    margin: 0;
+    pointer-events: none
+}
+.data.storage::before {
+    content: "Synopsis";
+    position: absolute;
+    right: 347.5px;
+    top: calc(50% - 30px);
+    z-index: auto;
+	line-height: 19px !important;
+    width: 60px;
+    padding: 0px;
+    background-color: #000;
+    border-radius: 8.5px;
+    font: 12px Arial;
+    color: #fca486;
+    text-align: center;
+    transform: translate(50%, -50%);
+    pointer-events: auto
+}
+.data.retail::before {
+    content: "Synopsis";
+    position: absolute;
+    right: 347.5px;
+    top: calc(50% - 30px);
+    z-index: auto;
+	line-height: 19px !important;
+    width: 60px;
+    padding: 0px;
+    background-color: #000;
+    border-radius: 8.5px;
+    font: 12px Arial;
+    color: #fca486;
+    text-align: center;
+    transform: translate(50%, -50%);
+    pointer-events: auto
+}
+.data.storage::after, .data.retail::after {
+    position: absolute;
+    right: 0;
+    top: calc(50% + 57px);
+    z-index: 10000;
+    width: 1020px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-left: 21px;
+    padding-right: 20px;
+    --rounding: 0px;
+    border-radius: var(--rounding);
+    background-color: #111211;
+    font: 12px Inconsolata, monospace;
+    color: #9cf5ff;
+    line-height: 1.6;
+    text-align: center;
+    white-space: pre-wrap;
+    opacity: 0;
+    transition: opacity .3s ease
+}
+.data.storage:hover::before, .data.retail:hover::before {
+    background-color:var(--btn-bg-h) !important;
+}
+.data.storage:hover::after, .data.retail:hover::after {
+    opacity: 1
+}
+/*------------------------E-N-D-*/
+
+/*-S-T-A-R-T--------------------*\
+| Hover Image By Border R0.3     |
+\*------------------------------*/
+.data.image a{overflow:visible}
+.data.image a:before{content:"";position:absolute;top:50%;left:-270px;z-index:50;width:240px!important;height:320px!important;background:var(--bg-dark) no-repeat center/cover;border-radius:8px;box-shadow:0 0 2px #000; opacity:0;pointer-events:none;}
+.list-item:hover .data.image a:before{top:calc(50% - 150px);height:320px; opacity:1;}.data.image a:after,.data.image img{border-radius:50%}
+/*------------------------E-N-D-*/
+
+/*-S-T-A-R-T---------------------*\
+| Hover image border- Per Category |
+\*-------------------------------*/
+
+/*Watching*/
+.data.watching ~ .image a:before,
+.data.reading ~ .image a:before{
+border-style: solid;
+border-color: var(--watching)!important;
+border-width: 3px !important;
+  }
+
+/*Completed*/
+.data.completed ~ .image a:before {
+border-style: solid;
+border-color: var(--completed)!important;
+border-width: 3px !important;
+} 
+  
+/*On-hold*/
+.data.onhold ~ .image a:before {
+border-style: solid;
+border-color: var(--onhold)!important;
+border-width: 3px !important;
+} 
+
+/*Dropped*/
+.data.dropped ~ .image a:before {
+border-style: solid;
+border-color: var(--dropped) !important;
+border-width: 3px !important;
+} 
+
+/*Planned*/
+.data.plantowatch ~ .image a:before,
+.data.plantoread ~ .image a:before {
+border-style: solid;
+border-color: var(--plantowatch) !important;
+border-width: 3px !important;
+}
+/*------------------------E-N-D-*/
+
+/*==============================*\
+| Category-Coloured Titles-Hover |
+\* --- - --- - ---- - --- - --- */
+
+.data.title .link:hover {
+	text-decoration: none;
+}
+
+.list-item .data.watching ~ .title .link:hover,
+.list-item .data.reading ~ .title .link:hover {
+	/* Watching */
+	color: #2db039 !important;
+}
+
+.list-item .data.completed ~ .title .link:hover {
+	/* Completed */
+	color: #26448f !important;
+}
+
+.list-item .data.onhold ~ .title .link:hover {
+	/* On Hold */
+	color: #f1c83e !important;
+}
+
+.list-item .data.dropped ~ .title .link:hover {
+	/* Dropped */
+	color: #a12f31 !important;
+}
+
+.list-item .data.plantowatch ~ .title .link:hover,
+.list-item .data.plantoread ~ .title .link:hover {
+	/* Planned */
+	color: #c3c3c3 !important;
+}
+/*======= */
+
+/*------------------------------*\
+  POSITION & SIZES
+\*------------------------------*/
+.content-status, .rewatching, .rereading {
+    position: relative !important;
+    top: -32px !important;
+    left: 65px !important;
+}
+.content-status:after, .rewatching:after, .rereading:after {
+    content: " ]" !important;
+}
+.list-table .list-table-data .data.title .add-edit-more {
+    float: right !important;
+	margin-top: -5px !important;
+    margin-right: 10px;
+}
+.data.score {font: 20px Arial !important;}
+.data.title {font-size: 12px;}
+.edit, .more, .data.type, .data.started, .data.finished, .data.studio , .data.season, .data.magazine, .data.licensor, .data.tags, .data.tags a:not(.edit) {
+	font: 11px Arial !important;
+}
+.progress, .rated {
+    font-size: 10px;
+}
+/*======= */
+
+/* EDIT/ADD, little dash between them, and MORE */
+.list-table a.List_LightBox {
+    font-size: 12px;
+}
+.list-table .list-table-data .data.title .add-edit-more {
+    color: transparent;
+    font-size: 12px;
+}
+.list-table .list-table-data .data.title .more a {
+    font-size: 12px;
+}
+
+/*------------------------------*\
+  LIST @Dates
+\*------------------------------*/
+/*=== config for start/end dates */
+.data.airing-finished, 
+.data.airing-started,
+.data.days, .data.finished,
+.data.started {
+  position:relative;
+  width:100px;
+  height:14px;
+  overflow:hidden;
+  /* order of dates */
+  order:18;
+  color:var(--text);
+  font-size:9px;
+  line-height:14px;
+  text-align:left !important;
+  text-overflow:ellipsis;
+}
+
+/* ==== position for dates 
+and premiered */
+.data.started {top:-20px}
+.data.finished{
+  top:0;
+  margin-left:-100px
+}
+.data.days{
+  top:20px;
+  margin-left:-100px
+}
+
+/* separator line for started/finished dates */
+.data.airing-finished:before,
+.data.airing-started:before,
+.data.days:before,
+.data.finished:before,
+.data.started:before{
+  display:inline-block;
+  width:30px;
+  padding-right:10px;
+  border-right:2px solid var(--text-dim);
+  text-align:right;
+  color:var(--text-dim)
+}
+
+/*------------------------------*\
+  LABELS texts
+  starting-finished dates, total days, airing dates
+\*------------------------------*/
+.data.studio:before{content:"Studio(s):";
+  color:var(--text-dim);
+  font-size: 9px;
+}
+
+/* ====== airing status */
+.content-status, 
+.rereading, .rewatching{
+  color: #ec8713 !important;
+  font-size: 11px !important; 
+  font-weight: bold !important;
+}
+
+/*======= */
+
+.data.rated { margin-right:14px; order:16; }	
+
+.data.progress { margin-right:0px; } 
+
+.data.tags a.edit { right: -1060px; }
+.data.tags textarea { right: -1060px; }
+
+/* Number Status Color */
+[data-query*="\"status\":7"] .data.status.watching + .data.number,
+[data-query*="\"status\":7"] .data.status.reading + .data.number
+{color: var(--current-accent) !important;}
+[data-query*="\"status\":7"] .data.status.completed + .data.number
+{color: var(--completed-accent) !important;}
+[data-query*="\"status\":7"] .data.status.onhold + .data.number
+{color: var(--onhold-accent) !important;}
+[data-query*="\"status\":7"] .data.status.dropped + .data.number
+{color: var(--dropped-accent) !important;}
+[data-query*="\"status\":7"] .data.status.plantowatch + .data.number,
+[data-query*="\"status\":7"] .data.status.plantoread + .data.number
+{color: var(--planned-accent) !important;}
+/*======= */
+
+/*-------------------------------*\
+|   CUSTOM SCROLLBAR    |
+\*------------------------------*/
+
+/* Firefox */
+* {
+	scrollbar-color: var(--text) var(--bg);
+}
+
+/* Chrome */
+
+*::-webkit-scrollbar {
+	background: var(--bg);
+}
+
+*::-webkit-scrollbar-button:vertical {
+	background: transparent center / 10px auto no-repeat;
+} *::-webkit-scrollbar-button:vertical:start {
+	background-image: url(https://i.imgur.com/Cu2u9Hu.png);
+} *::-webkit-scrollbar-button:vertical:end {
+	background-image: url(https://i.imgur.com/0YI7VxA.png);
+} *::-webkit-scrollbar-button:horizontal {
+	background: transparent center / auto 10px no-repeat;
+} *::-webkit-scrollbar-button:horizontal:start {
+	background-image: url(https://i.imgur.com/BArw1oI.png);
+} *::-webkit-scrollbar-button:horizontal:end {
+	background-image: url(https://i.imgur.com/vqOtoms.png);
+}
+
+*::-webkit-scrollbar-corner {
+	background: var(--bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--text) content-box;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  background-clip: content-box; 
+}
+*::-webkit-scrollbar-thumb:vertical {
+	border-width: 0 1px transparent;
+} *::-webkit-scrollbar-thumb:horizontal {
+	border-width: 2px 0 transparent;
+} *::-webkit-scrollbar-thumb:hover {
+	background-color: var(--text-dim);
+} 
+
+*::-webkit-scrollbar-track {
+	width: 5px;
+}
+/*------------------------E-N-D-*/
+
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+/*======= */
+
+/* captcha */
+body > div:nth-child(20) > div {
+display: none;
+}
+/*======= */
+
+/*-S-T-A-R-T--------------------*\
+| Header Outline (CatCol) R0.0   |
+\*------------------------------*/
+[data-query*='status":7']{--header-border:var(--accent)}[data-query*='status":1']{--header-border:var(--watching)}[data-query*='status":2']{--header-border:var(--completed)}[data-query*='status":3']{--header-border:var(--onhold)}[data-query*='status":4']{--header-border:var(--dropped)}[data-query*='status":6']{--header-border:var(--plantowatch)}.status-menu-container:before{height:56px;border-width:4px 0;border-style:solid;border-color:var(--header-border)}.status-menu:after{left:-4px;top:-47px;border-width:4px;box-shadow:0 0 0 4px var(--header-border)}.fixed .status-menu:after{top:4px}
+/*------------------------E-N-D-*/
+
+/*-S-T-A-R-T--------------------*\
+| Category Headers (Round) R0.3  |
+\*------------------------------*/
+[data-query*='"status":7']:not([data-query*=order]):not([data-query*='tag"']):not([data-query*='"s"']) .list-item:nth-child(2){margin-top:58px}.list-item .status:after,.list-item .status:before{
+	position:absolute;top:-40px;left:0;display:block;width:1059px;height:31px;background:var(--bg);border-width:1px 0 0 1px;border-style:solid;border-color:var(--text-head);border-radius:16px 16px 16px 16px;color:var(--text-head);font:20px/31px Oswald;letter-spacing:3px;text-indent:-.5px;text-transform:uppercase;pointer-events:none;
+}
+
+/*[data-query*='"status":7']:not([data-query*=order]):not([data-query*='tag"']):not([data-query*='"s"']) .list-item .status:after{
+	content:"";top:auto;bottom:-40px;height:32px;border-width:0 0 0 1px;border-radius:16px 16px 16px 16px;
+}*/
+.list-item .reading:after,.list-item .reading:before,.list-item .watching:after,.list-item .watching:before {
+	border-color:var(--watching);
+}
+.list-item .completed:after,.list-item .completed:before {
+	border-color:var(--completed);
+	box-shadow: 1px 1px 15px 9px rgba(71, 124, 220, 0.7);
+}
+.list-item .onhold:after,.list-item .onhold:before {
+	border-color:var(--onhold);
+}
+.list-item .dropped:after,.list-item .dropped:before {
+	border-color:var(--dropped);
+}
+.list-item .plantoread:after,.list-item .plantoread:before,.list-item .plantowatch:after,.list-item .plantowatch:before {
+	border-color:var(--plantowatch);
+}
+/*------------------------E-N-D-*/
+
+/*-S-T-A-R-T---------------------*\
+| Hover box shadow - Per Category |
+\*-------------------------------*/
+[data-query*='"status":7'] .list-table-data:hover .data.status.watching:after,
+[data-query*='"status":7'] .list-table-data:hover .data.status.reading:after
+{
+content: "";
+background-color:black;
+opacity: 1;
+position:absolute;
+display: block;
+width: 1058px;
+height: 105px;
+margin-left: -0px;
+top: 0px !important;
+box-shadow: 1px 1px 15px 9px green;
+}
+
+[data-query*='"status":7'] .list-table-data:hover .data.status.completed:after{
+content: "";
+background-color:black;
+opacity: 1;
+position:absolute;
+display: block;
+width: 1058px;
+height: 105px;
+margin-left: -0px;
+top: 0px !important;
+box-shadow: 1px 1px 15px 9px blue;
+}
+
+[data-query*='"status":7'] .list-table-data:hover .data.status.onhold:after{
+content: "";
+background-color:black;
+opacity: 1;
+position:absolute;
+display: block;
+width: 1058px;
+height: 105px;
+margin-left: -0px;
+top: 0px !important;
+box-shadow: 1px 1px 15px 9px yellow;
+}
+
+[data-query*='"status":7'] .list-table-data:hover .data.status.dropped:after{
+content: "";
+background-color:black;
+opacity: 1;
+position:absolute;
+display: block;
+width: 1058px;
+height: 105px;
+margin-left: -0px;
+top: 0px !important;
+box-shadow: 1px 1px 15px 9px red;
+}
+
+[data-query*='"status":7'] .list-table-data:hover .data.status.plantowatch:after,
+[data-query*='"status":7'] .list-table-data:hover .data.status.plantoread:after{
+content: "";
+background-color:black;
+opacity: 1;
+position:absolute;
+display: block;
+width: 1058px;
+height: 105px;
+margin-left: -0px;
+top: 0px !important;
+box-shadow: 1px 1px 15px 9px white;
+}
+
+[data-query*='"status":1'] .list-table-data:hover {
+content: "";
+background: black;
+box-shadow: 1px 1px 15px 9px green;
+}
+
+[data-query*='"status":2'] .list-table-data:hover {
+content: "";
+background: black;
+box-shadow: 1px 1px 15px 9px blue;
+}
+
+[data-query*='"status":3'] .list-table-data:hover {
+content: "";
+background-color: black;
+box-shadow: 1px 1px 15px 9px yellow;
+}
+
+[data-query*='"status":4'] .list-table-data:hover {
+content: "";
+background-color: black;
+box-shadow: 1px 1px 15px 9px red;
+}
+
+[data-query*='"status":6'] .list-table-data:hover {
+content: "";
+background-color: black;
+box-shadow: 1px 1px 15px 9px white;
+}
+/*------------------------E-N-D-*/
+
+/* - - - - - - - - - - - - - - -*\
+  !STATUS-MENU
+\*- - - - - - - - - - - - - - - */
+.status-menu {
+	display: flex !important;
+	/*height: 64px;*/
+	padding: 0px -26px 0 0 !important;
+}
+/* Base */
+.status-menu-container .status-menu .status-button {
+	font-size: 0 !important;
+	letter-spacing: 0;
+}
+
+#status-menu .status-button::before {
+	font-size: 17.6px;
+	letter-spacing: 1px;
+} 
+#status-menu .status-button.all_anime::before {
+	content: "ALL ⚠";
+} 
+#status-menu .status-button.watching::before {
+	content: "CURRENTLY WATCHING 👀";
+}
+#status-menu .status-button.reading::before {
+	content: "CURRENTLY READING 👀";
+}
+#status-menu .status-button.completed::before {
+	content: "COMPLETED 🎉";
+} 
+#status-menu .status-button.onhold::before {
+	content: "ON HOLD 💦";
+} 
+#status-menu .status-button.dropped::before {
+	content: "DROPPED 💩";
+} 
+#status-menu .status-button.plantowatch::before {
+	content: "PLAN TO WATCH 💬";
+}
+#status-menu .status-button.plantoread::before {
+	content: "PLAN TO READ 💬";
+}
+
+#search-button i, #search-box {
+	position: relative;
+	right: -150px !important;
+}
+
+.loading-space {
+	height: 160px !important;
+}
+
+/*-S-T-A-R-T--------------------*\
+| Character Renders R0.3         |
+\*------------------------------*/
+
+footer:before, footer:after {
+	content: "";
+	position: fixed;
+	top: 0;
+	z-index: -1;
+	
+	width: calc(50% - 538px);
+	min-width: 262px;
+	height: 100%;
+	background: transparent no-repeat center bottom / contain scroll;
+}
+
+/* Left Render */
+footer:before {
+	right: calc(100% - (50% - 538px));
+	
+	background-image: none;
+	background-position: left bottom;
+}
+
+/* Right Render */
+footer:after {
+	left: calc(100% - (50% - 538px));
+	
+	background-image: none;
+	background-position: right bottom;
+}
+
+/*------------------------E-N-D-*/
+
+#footer-block {
+	background: transparent !important; width: 33% !important; margin-left: 20%; background-color: rgba(0,0,0,.5) !important; border-radius: 20px;
+}
+
+/* ====== copyright */
+#copyright{
+	padding: 0;
+	color: var(--text-head);
+	line-height: 16px;
+	font-size: 12px;
+}
+#copyright:after{
+	content:"\a List Design Created by Valerio Lyndon. Modified by ShaggyZE & SheyCroix. \a　　♥";
+}
+
+.status-menu .status-button {
+transition: color 0.0s ease !important;
+}
+
+/* Remove PV Icons */
+.malicon, .icon-watch2 {
+    display: none !important;
+}
+
+.list-stats { display: block !important; width: 50% !important; margin-top: 5px; margin-left: 137.5px; background-color: rgba(0,0,0,.5) !important; border-radius: 16px; }
+.stats a:first-of-type { display: none !important; }
+
+/*.cover-block, .status-menu-container {
+	z-index: 0 !important;
+}
+.list-menu-float {
+	z-index: 1 !important;
+}*/
