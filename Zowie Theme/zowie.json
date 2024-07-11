@@ -1,12 +1,14 @@
 {
-	"json_version": 0.3,
+	"json_version": 0.4,
 	"data": {
 		"name": "Zowie",
 		"author": "ShaggyZE",
 		"css": "https://shaggyze.github.io/Themes/Zowie%20Theme/Theme.css",
 		"type": "modern",
 		"help": "https://myanimelist.net/forum/?topicid=1723114",
-		"flags": ["alpha"],
+		"flags": [
+			"alpha"
+		],
 		"sponsor": "https://ko-fi.com/valeriolyndon",
 		"columns": {
 			"mode": "greylist",
@@ -45,7 +47,12 @@
 			"background": {
 				"name": "Background",
 				"type": "text/image_url",
-				"replacements": [["--background: url(https://cdn.myanimelist.net/s/common/uploaded_files/1659714746-a2fb60628a7f1aaff30fb6151f3e54a0.jpeg);", "--background:{{{insert}}};"]],
+				"replacements": [
+					[
+						"--background: url(https://cdn.myanimelist.net/s/common/uploaded_files/1659714746-a2fb60628a7f1aaff30fb6151f3e54a0.jpeg);",
+						"--background:{{{insert}}};"
+					]
+				],
 				"default": "https://cdn.myanimelist.net/s/common/uploaded_files/1659714746-a2fb60628a7f1aaff30fb6151f3e54a0.jpeg"
 			}
 		},
@@ -59,19 +66,33 @@
 				},
 				"options": {
 					"import-url": {
-					"name": "URL to your CSS",
-					"type": "text",
-					"replacements": [["\"https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css\"", "\"{{{insert}}}\""]],
-					"default": "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css"
+						"name": "URL to your CSS",
+						"type": "text",
+						"replacements": [
+							[
+								"\"https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css\"",
+								"\"{{{insert}}}\""
+							]
+						],
+						"default": "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css"
 					},
 					"transition": {
-					"name": "Transition",
-					"type": "text",
-					"replacements": [["\"https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css\"", "\"{{{insert}}}\""]],
-					"default": "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css"
+						"name": "Transition",
+						"type": "text",
+						"replacements": [
+							[
+								"\"https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css\"",
+								"\"{{{insert}}}\""
+							]
+						],
+						"default": "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css"
 					}
 				}
 			}
-		}
+		},
+		"supports": [
+			"animelist",
+			"mangalist"
+		]
 	}
 }
