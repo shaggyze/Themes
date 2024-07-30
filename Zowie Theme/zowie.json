@@ -70,7 +70,7 @@
 						"description": "Must be entered exactly as it appears on MyAnimeList.",
 						"type": "text",
 						"replacements": [
-							["USERNAME", "{{{insert}}}]
+							["USERNAME", "{{{insert}}}"]
 						],
 						"default": "ShaggyZE"
 					},
@@ -100,7 +100,7 @@
 						"description": "Must be entered exactly as it appears on MyAnimeList.",
 						"type": "text",
 						"replacements": [
-							["USERNAME", "{{{insert}}}]
+							["USERNAME", "{{{insert}}}"]
 						],
 						"default": "ShaggyZE"
 					},
