@@ -58,23 +58,21 @@
 		},
 		"mods": {
 			"synopsis": {
-				"name": "Synopsis",
-				"description": "Adds synopsis on hover",
+				"name": "Synopsis Hover Mod",
+				"description": "Adds synopsis on mouse hover. [b]Will increase page load times.[/b]",
 				"css": {
-					"import": "@\\import \"https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css\";",
+					"import": "@\\import \"https://shaggyze.website/msa/usercss?u=[USERNAME]q=body%5Bdata-work%3D%22%7Btype%7D%22%5D%20%23tags-%7Banime_id%7D%3Aafter%20%7Bfont-family%3A%20Finger%20Paint%3B%20content%3A%20%27%7Bsynopsis%27%3B%7D";\n@\\import \"https://shaggyze.website/msa/usercss?u=[USERNAME]&t=mangaq=body%5Bdata-work%3D%22%7Btype%7D%22%5D%20%23tags-%7Bmanga_id%7D%3Aafter%20%7Bfont-family%3A%20Finger%20Paint%3B%20content%3A%20%27%7Bsynopsis%27%3B%7D";",
 					"bottom": "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis.css"
 				},
 				"options": {
-					"import-url": {
-						"name": "URL to your CSS",
+					"username": {
+						"name": "Your MyAnimeList Username",
+						"description": "Must be entered exactly as it appears on MyAnimeList.",
 						"type": "text",
 						"replacements": [
-							[
-								"\"https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css\"",
-								"\"{{{insert}}}\""
-							]
+							["[USERNAME]", "{{{insert}}}]
 						],
-						"default": "https://dl.dropboxusercontent.com/s/ta5rab8nycn6950/maltags.css"
+						"default": "ShaggyZE"
 					},
 					"transition": {
 						"name": "Transition",
@@ -88,6 +86,43 @@
 						"default": "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css"
 					}
 				}
+			},
+			"image-hover": {
+				"name": "Image Hover Mod",
+				"description": "Adds larger images on mouse hover. [b]Will increase page load times.[/b]",
+				"css": {
+					"import": "@\\import \"https://shaggyze.website/msa/usercover?u=[USERNAME]";\n@\\import \"https://shaggyze.website/msa/usercover?u=[USERNAME]&t=manga";",
+					"bottom": "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Image.css"
+				},
+				"options": {
+					"username": {
+						"name": "Your MyAnimeList Username",
+						"description": "Must be entered exactly as it appears on MyAnimeList.",
+						"type": "text",
+						"replacements": [
+							["[USERNAME]", "{{{insert}}}]
+						],
+						"default": "ShaggyZE"
+					},
+					"hover": {
+						"name": "Activation Method",
+						"description": "When do you want the image to display: when hovering the entire row, or only the image?",
+						"type": "select",
+						"selections": {
+							"on-row": {
+								"label": "On Row",
+								"replacements": []
+							},
+							"on-img": {
+								"label": "On Image",
+								"replacements": [
+									[".list-item:hover .data.image a:before", ".data.image:hover a:before"]
+								]
+							}
+						}
+					}
+				},
+				"tags": ["visual flare", "additional imagery"]
 			}
 		},
 		"supports": [
