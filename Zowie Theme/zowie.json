@@ -57,7 +57,7 @@
 			}
 		},
 		"mods": {
-			"synopsis": {
+			/*"synopsis": {
 				"name": "Synopsis Hover Mod",
 				"description": "Adds synopsis on mouse hover. [b]Will increase page load times.[/b]",
 				"css": {
@@ -86,7 +86,7 @@
 						"default": "https://shaggyze.github.io/Themes/Zowie%20Theme/Mod%20-%20Hover%20Synopsis%20Transition.css"
 					}
 				}
-			},
+			},*/
 			"image-hover": {
 				"name": "Image Hover Mod",
 				"description": "Adds larger images on mouse hover. [b]Will increase page load times.[/b]",
