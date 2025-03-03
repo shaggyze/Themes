@@ -1,0 +1,59 @@
+/*-S-T-A-R-T--------------------*\
+| Large Full-Res Cover Hover R0.1|
+\*------------------------------*/
+@media all and (orientation: landscape) {
+.data.image a:before {
+  content: "";
+  display: block !important;
+  position: fixed;
+  top: 5%;
+  left:50%;
+  width: 16%;
+  height: 37% !important;
+  background-color: rgba(0,0,0,.3);
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  /* border: 1px solid var(--text); */
+  border-radius: 18px;
+  box-shadow: 0 2px 5px rgba(0,0,0, 0.7);
+  /* visibility: hidden;*/
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  pointer-events: none;
+  z-index: 5;
+}
+}
+
+@media all and (orientation: portrait) {
+.data.image a:before {
+  content: "";
+  display: block !important;
+  position: fixed;
+  top: 2%;
+  left: 2% !important;
+  width: 17%;
+  height: 22.5%;
+  background-color: rgba(0,0,0,.3);
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  border: 1px solid var(--text);
+  border-radius: 18px;
+  box-shadow: 0 2px 5px rgba(0,0,0, 0.7);
+  /* visibility: hidden; */
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  pointer-events: none;
+  z-index: 5;
+}
+}
+
+.list-table .list-table-data:hover .data.image a:before {
+  left: 2%;
+  visibility: visible;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  pointer-events: none;
+}
+/*------------------------E-N-D-*/
